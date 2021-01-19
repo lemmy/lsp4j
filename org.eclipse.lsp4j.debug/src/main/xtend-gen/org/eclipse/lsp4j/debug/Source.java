@@ -15,7 +15,6 @@ import java.util.Arrays;
 import org.eclipse.lsp4j.debug.Checksum;
 import org.eclipse.lsp4j.debug.SourcePresentationHint;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A Source is a descriptor for source code.
@@ -285,20 +284,6 @@ public class Source {
    */
   public void setChecksums(final Checksum[] checksums) {
     this.checksums = checksums;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("name", this.name);
-    b.add("path", this.path);
-    b.add("sourceReference", this.sourceReference);
-    b.add("presentationHint", this.presentationHint);
-    b.add("origin", this.origin);
-    b.add("sources", this.sources);
-    b.add("adapterData", this.adapterData);
-    b.add("checksums", this.checksums);
-    return b.toString();
   }
   
   @Override

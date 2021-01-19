@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class InitializeError {
@@ -50,13 +49,6 @@ public class InitializeError {
    */
   public void setRetry(final boolean retry) {
     this.retry = retry;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("retry", this.retry);
-    return b.toString();
   }
   
   @Override

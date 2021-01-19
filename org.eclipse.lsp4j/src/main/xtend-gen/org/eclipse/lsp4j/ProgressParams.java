@@ -18,7 +18,6 @@ import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The base protocol offers also support to report progress in a generic fashion.
@@ -100,14 +99,6 @@ public class ProgressParams {
    */
   public void setValue(@NonNull final WorkDoneProgressNotification value) {
     this.value = Preconditions.checkNotNull(value, "value");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("token", this.token);
-    b.add("value", this.value);
-    return b.toString();
   }
   
   @Override

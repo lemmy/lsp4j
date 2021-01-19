@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import java.util.List;
 import org.eclipse.lsp4j.ParameterInformationCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The client supports the following `SignatureInformation` specific properties.
@@ -104,15 +103,6 @@ public class SignatureInformationCapabilities {
    */
   public void setActiveParameterSupport(final Boolean activeParameterSupport) {
     this.activeParameterSupport = activeParameterSupport;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("documentationFormat", this.documentationFormat);
-    b.add("parameterInformation", this.parameterInformation);
-    b.add("activeParameterSupport", this.activeParameterSupport);
-    return b.toString();
   }
   
   @Override

@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.MessageType;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The show message notification is sent from a server to a client to ask the client to display a particular message
@@ -75,14 +74,6 @@ public class MessageParams {
    */
   public void setMessage(@NonNull final String message) {
     this.message = Preconditions.checkNotNull(message, "message");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("type", this.type);
-    b.add("message", this.message);
-    return b.toString();
   }
   
   @Override

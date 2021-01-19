@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.debug.Source;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The event indicates that the target has produced some output.
@@ -240,20 +239,6 @@ public class OutputEventArguments {
    */
   public void setData(final Object data) {
     this.data = data;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("category", this.category);
-    b.add("output", this.output);
-    b.add("group", this.group);
-    b.add("variablesReference", this.variablesReference);
-    b.add("source", this.source);
-    b.add("line", this.line);
-    b.add("column", this.column);
-    b.add("data", this.data);
-    return b.toString();
   }
   
   @Override

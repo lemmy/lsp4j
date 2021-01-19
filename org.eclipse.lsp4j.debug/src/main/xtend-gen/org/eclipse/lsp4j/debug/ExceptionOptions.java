@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.debug.ExceptionPathSegment;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * An ExceptionOptions assigns configuration options to a set of exceptions.
@@ -79,14 +78,6 @@ public class ExceptionOptions {
    */
   public void setBreakMode(@NonNull final ExceptionBreakMode breakMode) {
     this.breakMode = Preconditions.checkNotNull(breakMode, "breakMode");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("path", this.path);
-    b.add("breakMode", this.breakMode);
-    return b.toString();
   }
   
   @Override

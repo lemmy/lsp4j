@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.MarkdownCapabilities;
 import org.eclipse.lsp4j.RegularExpressionsCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * General client capabilities.
@@ -73,14 +72,6 @@ public class GeneralClientCapabilities {
    */
   public void setMarkdown(final MarkdownCapabilities markdown) {
     this.markdown = markdown;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("regularExpressions", this.regularExpressions);
-    b.add("markdown", this.markdown);
-    return b.toString();
   }
   
   @Override

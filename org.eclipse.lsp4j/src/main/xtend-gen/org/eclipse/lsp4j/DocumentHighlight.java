@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.Range;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A document highlight is a range inside a text document which deserves special attention. Usually a document highlight
@@ -76,14 +75,6 @@ public class DocumentHighlight {
    */
   public void setKind(final DocumentHighlightKind kind) {
     this.kind = kind;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("range", this.range);
-    b.add("kind", this.kind);
-    return b.toString();
   }
   
   @Override

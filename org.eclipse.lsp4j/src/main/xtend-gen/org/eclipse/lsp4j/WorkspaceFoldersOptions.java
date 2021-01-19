@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The server supports workspace folder.
@@ -94,14 +93,6 @@ public class WorkspaceFoldersOptions {
       return;
     }
     this.changeNotifications = Either.forRight(changeNotifications);
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("supported", this.supported);
-    b.add("changeNotifications", this.changeNotifications);
-    return b.toString();
   }
   
   @Override

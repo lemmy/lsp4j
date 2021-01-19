@@ -14,7 +14,6 @@ package org.eclipse.lsp4j.debug;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Response to 'setVariable' request.
@@ -178,17 +177,6 @@ public class SetVariableResponse {
    */
   public void setIndexedVariables(final Integer indexedVariables) {
     this.indexedVariables = indexedVariables;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("value", this.value);
-    b.add("type", this.type);
-    b.add("variablesReference", this.variablesReference);
-    b.add("namedVariables", this.namedVariables);
-    b.add("indexedVariables", this.indexedVariables);
-    return b.toString();
   }
   
   @Override

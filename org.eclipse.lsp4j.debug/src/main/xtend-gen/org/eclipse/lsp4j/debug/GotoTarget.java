@@ -14,7 +14,6 @@ package org.eclipse.lsp4j.debug;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A GotoTarget describes a code location that can be used as a target in the 'goto' request.
@@ -187,19 +186,6 @@ public class GotoTarget {
    */
   public void setInstructionPointerReference(final String instructionPointerReference) {
     this.instructionPointerReference = instructionPointerReference;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("id", this.id);
-    b.add("label", this.label);
-    b.add("line", this.line);
-    b.add("column", this.column);
-    b.add("endLine", this.endLine);
-    b.add("endColumn", this.endColumn);
-    b.add("instructionPointerReference", this.instructionPointerReference);
-    return b.toString();
   }
   
   @Override

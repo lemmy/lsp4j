@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.Range;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A textual edit applicable to a text document.
@@ -72,14 +71,6 @@ public class TextEdit {
    */
   public void setNewText(@NonNull final String newText) {
     this.newText = Preconditions.checkNotNull(newText, "newText");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("range", this.range);
-    b.add("newText", this.newText);
-    return b.toString();
   }
   
   @Override

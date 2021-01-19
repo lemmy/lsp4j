@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Server supports providing semantic tokens for a full document.
@@ -46,13 +45,6 @@ public class SemanticTokensServerFull {
    */
   public void setDelta(final Boolean delta) {
     this.delta = delta;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("delta", this.delta);
-    return b.toString();
   }
   
   @Override

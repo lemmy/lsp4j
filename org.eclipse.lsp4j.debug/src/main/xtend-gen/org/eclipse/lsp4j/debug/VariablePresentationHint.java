@@ -13,7 +13,6 @@ package org.eclipse.lsp4j.debug;
 
 import java.util.Arrays;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Optional properties of a variable that can be used to determine how to render the variable in the UI.
@@ -117,15 +116,6 @@ public class VariablePresentationHint {
    */
   public void setVisibility(final String visibility) {
     this.visibility = visibility;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("kind", this.kind);
-    b.add("attributes", this.attributes);
-    b.add("visibility", this.visibility);
-    return b.toString();
   }
   
   @Override

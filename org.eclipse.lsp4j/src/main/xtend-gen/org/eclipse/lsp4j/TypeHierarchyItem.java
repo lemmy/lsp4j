@@ -20,7 +20,6 @@ import org.eclipse.lsp4j.jsonrpc.json.adapters.JsonElementTypeAdapter;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Representation of an item that carries type information (such as class, interface, enumeration, etc) with additional parentage details.
@@ -264,22 +263,6 @@ public class TypeHierarchyItem {
    */
   public void setData(final Object data) {
     this.data = data;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("name", this.name);
-    b.add("detail", this.detail);
-    b.add("kind", this.kind);
-    b.add("deprecated", this.deprecated);
-    b.add("uri", this.uri);
-    b.add("range", this.range);
-    b.add("selectionRange", this.selectionRange);
-    b.add("parents", this.parents);
-    b.add("children", this.children);
-    b.add("data", this.data);
-    return b.toString();
   }
   
   @Override

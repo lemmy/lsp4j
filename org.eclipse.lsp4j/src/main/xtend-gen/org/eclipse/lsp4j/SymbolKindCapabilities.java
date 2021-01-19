@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import java.util.List;
 import org.eclipse.lsp4j.SymbolKind;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Specific capabilities for the `SymbolKind`.
@@ -67,13 +66,6 @@ public class SymbolKindCapabilities {
    */
   public void setValueSet(final List<SymbolKind> valueSet) {
     this.valueSet = valueSet;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("valueSet", this.valueSet);
-    return b.toString();
   }
   
   @Override

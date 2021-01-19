@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to the `MessageActionItem` type of show message request.
@@ -52,13 +51,6 @@ public class WindowShowMessageRequestActionItemCapabilities {
    */
   public void setAdditionalPropertiesSupport(final Boolean additionalPropertiesSupport) {
     this.additionalPropertiesSupport = additionalPropertiesSupport;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("additionalPropertiesSupport", this.additionalPropertiesSupport);
-    return b.toString();
   }
   
   @Override

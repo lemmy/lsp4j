@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.FileOperationFilter;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The options for file operations.
@@ -53,13 +52,6 @@ public class FileOperationOptions {
    */
   public void setFilters(@NonNull final List<FileOperationFilter> filters) {
     this.filters = Preconditions.checkNotNull(filters, "filters");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("filters", this.filters);
-    return b.toString();
   }
   
   @Override

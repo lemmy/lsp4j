@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.TextEdit;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class ColorPresentation {
@@ -110,15 +109,6 @@ public class ColorPresentation {
    */
   public void setAdditionalTextEdits(final List<TextEdit> additionalTextEdits) {
     this.additionalTextEdits = additionalTextEdits;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("label", this.label);
-    b.add("textEdit", this.textEdit);
-    b.add("additionalTextEdits", this.additionalTextEdits);
-    return b.toString();
   }
   
   @Override

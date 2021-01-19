@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Delete file options
@@ -65,14 +64,6 @@ public class DeleteFileOptions {
    */
   public void setIgnoreIfNotExists(final Boolean ignoreIfNotExists) {
     this.ignoreIfNotExists = ignoreIfNotExists;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("recursive", this.recursive);
-    b.add("ignoreIfNotExists", this.ignoreIfNotExists);
-    return b.toString();
   }
   
   @Override

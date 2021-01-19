@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The workspace/workspaceFolders request is sent from the server to the client to fetch
@@ -76,14 +75,6 @@ public class WorkspaceFolder {
    */
   public void setName(final String name) {
     this.name = name;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("uri", this.uri);
-    b.add("name", this.name);
-    return b.toString();
   }
   
   @Override

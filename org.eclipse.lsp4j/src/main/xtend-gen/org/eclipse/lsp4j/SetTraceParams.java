@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A notification that should be used by the client to modify the trace setting of the server.
@@ -53,13 +52,6 @@ public class SetTraceParams {
    */
   public void setValue(@NonNull final String value) {
     this.value = Preconditions.checkNotNull(value, "value");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("value", this.value);
-    return b.toString();
   }
   
   @Override

@@ -14,7 +14,6 @@ package org.eclipse.lsp4j.debug;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A Thread
@@ -61,14 +60,6 @@ public class Thread {
    */
   public void setName(@NonNull final String name) {
     this.name = Preconditions.checkNotNull(name, "name");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("id", this.id);
-    b.add("name", this.name);
-    return b.toString();
   }
   
   @Override

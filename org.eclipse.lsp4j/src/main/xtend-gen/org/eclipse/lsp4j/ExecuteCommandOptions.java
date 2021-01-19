@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.AbstractWorkDoneProgressOptions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Execute command options.
@@ -52,14 +51,6 @@ public class ExecuteCommandOptions extends AbstractWorkDoneProgressOptions {
    */
   public void setCommands(@NonNull final List<String> commands) {
     this.commands = Preconditions.checkNotNull(commands, "commands");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("commands", this.commands);
-    b.add("workDoneProgress", getWorkDoneProgress());
-    return b.toString();
   }
   
   @Override

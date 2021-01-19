@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.debug.ExceptionOptions;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'setExceptionBreakpoints' request.
@@ -75,14 +74,6 @@ public class SetExceptionBreakpointsArguments {
    */
   public void setExceptionOptions(final ExceptionOptions[] exceptionOptions) {
     this.exceptionOptions = exceptionOptions;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("filters", this.filters);
-    b.add("exceptionOptions", this.exceptionOptions);
-    return b.toString();
   }
   
   @Override

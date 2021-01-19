@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.debug.DataBreakpointAccessType;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Properties of a data breakpoint passed to the setDataBreakpoints request.
@@ -126,16 +125,6 @@ public class DataBreakpoint {
    */
   public void setHitCondition(final String hitCondition) {
     this.hitCondition = hitCondition;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("dataId", this.dataId);
-    b.add("accessType", this.accessType);
-    b.add("condition", this.condition);
-    b.add("hitCondition", this.hitCondition);
-    return b.toString();
   }
   
   @Override

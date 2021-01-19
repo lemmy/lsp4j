@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.DiagnosticTag;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class DiagnosticsTagSupport {
@@ -50,13 +49,6 @@ public class DiagnosticsTagSupport {
    */
   public void setValueSet(@NonNull final List<DiagnosticTag> valueSet) {
     this.valueSet = Preconditions.checkNotNull(valueSet, "valueSet");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("valueSet", this.valueSet);
-    return b.toString();
   }
   
   @Override

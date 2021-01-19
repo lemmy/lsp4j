@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.Diagnostic;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Contains additional diagnostic information about the context in which a code action is run.
@@ -90,14 +89,6 @@ public class CodeActionContext {
    */
   public void setOnly(final List<String> only) {
     this.only = only;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("diagnostics", this.diagnostics);
-    b.add("only", this.only);
-    return b.toString();
   }
   
   @Override

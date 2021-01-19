@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import java.util.List;
 import org.eclipse.lsp4j.CompletionItemKind;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The client supports the following `CompletionItemKind` specific
@@ -68,13 +67,6 @@ public class CompletionItemKindCapabilities {
    */
   public void setValueSet(final List<CompletionItemKind> valueSet) {
     this.valueSet = valueSet;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("valueSet", this.valueSet);
-    return b.toString();
   }
   
   @Override

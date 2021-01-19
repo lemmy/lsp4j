@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.DynamicRegistrationCapabilities;
 import org.eclipse.lsp4j.PrepareSupportDefaultBehavior;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to the `textDocument/rename`
@@ -130,16 +129,6 @@ public class RenameCapabilities extends DynamicRegistrationCapabilities {
    */
   public void setHonorsChangeAnnotations(final Boolean honorsChangeAnnotations) {
     this.honorsChangeAnnotations = honorsChangeAnnotations;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("prepareSupport", this.prepareSupport);
-    b.add("prepareSupportDefaultBehavior", this.prepareSupportDefaultBehavior);
-    b.add("honorsChangeAnnotations", this.honorsChangeAnnotations);
-    b.add("dynamicRegistration", getDynamicRegistration());
-    return b.toString();
   }
   
   @Override

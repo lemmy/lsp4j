@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class DynamicRegistrationCapabilities {
@@ -41,13 +40,6 @@ public class DynamicRegistrationCapabilities {
    */
   public void setDynamicRegistration(final Boolean dynamicRegistration) {
     this.dynamicRegistration = dynamicRegistration;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("dynamicRegistration", this.dynamicRegistration);
-    return b.toString();
   }
   
   @Override

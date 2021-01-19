@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.jsonrpc.messages.Tuple;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Represents a parameter of a callable-signature. A parameter can have a label and a doc-comment.
@@ -136,14 +135,6 @@ public class ParameterInformation {
       return;
     }
     this.documentation = Either.forRight(documentation);
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("label", this.label);
-    b.add("documentation", this.documentation);
-    return b.toString();
   }
   
   @Override

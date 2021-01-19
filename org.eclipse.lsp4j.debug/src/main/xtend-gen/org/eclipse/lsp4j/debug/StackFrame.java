@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A Stackframe contains the source location.
@@ -294,22 +293,6 @@ public class StackFrame {
    */
   public void setPresentationHint(final StackFramePresentationHint presentationHint) {
     this.presentationHint = presentationHint;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("id", this.id);
-    b.add("name", this.name);
-    b.add("source", this.source);
-    b.add("line", this.line);
-    b.add("column", this.column);
-    b.add("endLine", this.endLine);
-    b.add("endColumn", this.endColumn);
-    b.add("instructionPointerReference", this.instructionPointerReference);
-    b.add("moduleId", this.moduleId);
-    b.add("presentationHint", this.presentationHint);
-    return b.toString();
   }
   
   @Override

@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j.debug;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'cancel' request.
@@ -81,14 +80,6 @@ public class CancelArguments {
    */
   public void setProgressId(final String progressId) {
     this.progressId = progressId;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("requestId", this.requestId);
-    b.add("progressId", this.progressId);
-    return b.toString();
   }
   
   @Override

@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.FileOperationsServerCapabilities;
 import org.eclipse.lsp4j.WorkspaceFoldersOptions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Workspace specific server capabilities
@@ -78,14 +77,6 @@ public class WorkspaceServerCapabilities {
    */
   public void setFileOperations(final FileOperationsServerCapabilities fileOperations) {
     this.fileOperations = fileOperations;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("workspaceFolders", this.workspaceFolders);
-    b.add("fileOperations", this.fileOperations);
-    return b.toString();
   }
   
   @Override

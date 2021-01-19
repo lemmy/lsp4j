@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.PartialResultParams;
 import org.eclipse.lsp4j.WorkDoneProgressParams;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Abstract class which implements work done progress and partial result request parameter.
@@ -98,14 +97,6 @@ public abstract class WorkDoneProgressAndPartialResultParams implements WorkDone
       return;
     }
     this.partialResultToken = Either.forRight(partialResultToken);
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("workDoneToken", this.workDoneToken);
-    b.add("partialResultToken", this.partialResultToken);
-    return b.toString();
   }
   
   @Override

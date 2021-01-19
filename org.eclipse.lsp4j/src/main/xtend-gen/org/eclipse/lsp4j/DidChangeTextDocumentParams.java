@@ -18,7 +18,6 @@ import org.eclipse.lsp4j.VersionedTextDocumentIdentifier;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The document change notification is sent from the client to the server to signal changes to a text document.
@@ -107,15 +106,6 @@ public class DidChangeTextDocumentParams {
    */
   public void setContentChanges(@NonNull final List<TextDocumentContentChangeEvent> contentChanges) {
     this.contentChanges = Preconditions.checkNotNull(contentChanges, "contentChanges");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("textDocument", this.textDocument);
-    b.add("uri", this.uri);
-    b.add("contentChanges", this.contentChanges);
-    return b.toString();
   }
   
   @Override

@@ -18,7 +18,6 @@ import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Represents the signature of something callable. A signature can have a label, like a function-name, a doc-comment, and
@@ -153,16 +152,6 @@ public class SignatureInformation {
    */
   public void setActiveParameter(final Integer activeParameter) {
     this.activeParameter = activeParameter;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("label", this.label);
-    b.add("documentation", this.documentation);
-    b.add("parameters", this.parameters);
-    b.add("activeParameter", this.activeParameter);
-    return b.toString();
   }
   
   @Override

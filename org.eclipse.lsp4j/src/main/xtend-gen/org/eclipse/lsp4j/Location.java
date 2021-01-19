@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.Range;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Represents a location inside a resource, such as a line inside a text file.
@@ -54,14 +53,6 @@ public class Location {
   
   public void setRange(@NonNull final Range range) {
     this.range = Preconditions.checkNotNull(range, "range");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("uri", this.uri);
-    b.add("range", this.range);
-    return b.toString();
   }
   
   @Override

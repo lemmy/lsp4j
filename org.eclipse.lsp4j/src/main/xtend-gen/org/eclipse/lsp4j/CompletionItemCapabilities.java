@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.CompletionItemInsertTextModeSupportCapabilities;
 import org.eclipse.lsp4j.CompletionItemResolveSupportCapabilities;
 import org.eclipse.lsp4j.CompletionItemTagSupportCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The client supports the following `CompletionItem` specific capabilities.
@@ -274,21 +273,6 @@ public class CompletionItemCapabilities {
    */
   public void setInsertTextModeSupport(final CompletionItemInsertTextModeSupportCapabilities insertTextModeSupport) {
     this.insertTextModeSupport = insertTextModeSupport;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("snippetSupport", this.snippetSupport);
-    b.add("commitCharactersSupport", this.commitCharactersSupport);
-    b.add("documentationFormat", this.documentationFormat);
-    b.add("deprecatedSupport", this.deprecatedSupport);
-    b.add("preselectSupport", this.preselectSupport);
-    b.add("tagSupport", this.tagSupport);
-    b.add("insertReplaceSupport", this.insertReplaceSupport);
-    b.add("resolveSupport", this.resolveSupport);
-    b.add("insertTextModeSupport", this.insertTextModeSupport);
-    return b.toString();
   }
   
   @Override

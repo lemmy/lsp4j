@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A Module object represents a row in the modules view.
@@ -331,22 +330,6 @@ public class Module {
    */
   public void setAddressRange(final String addressRange) {
     this.addressRange = addressRange;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("id", this.id);
-    b.add("name", this.name);
-    b.add("path", this.path);
-    b.add("isOptimized", this.isOptimized);
-    b.add("isUserCode", this.isUserCode);
-    b.add("version", this.version);
-    b.add("symbolStatus", this.symbolStatus);
-    b.add("symbolFilePath", this.symbolFilePath);
-    b.add("dateTimeStamp", this.dateTimeStamp);
-    b.add("addressRange", this.addressRange);
-    return b.toString();
   }
   
   @Override

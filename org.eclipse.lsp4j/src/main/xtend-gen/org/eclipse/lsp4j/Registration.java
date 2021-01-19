@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.jsonrpc.json.adapters.JsonElementTypeAdapter;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * General parameters to register for a capability.
@@ -102,15 +101,6 @@ public class Registration {
    */
   public void setRegisterOptions(final Object registerOptions) {
     this.registerOptions = registerOptions;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("id", this.id);
-    b.add("method", this.method);
-    b.add("registerOptions", this.registerOptions);
-    return b.toString();
   }
   
   @Override

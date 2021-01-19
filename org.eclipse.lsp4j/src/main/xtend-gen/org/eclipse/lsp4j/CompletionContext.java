@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.CompletionTriggerKind;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class CompletionContext {
@@ -74,14 +73,6 @@ public class CompletionContext {
    */
   public void setTriggerCharacter(final String triggerCharacter) {
     this.triggerCharacter = triggerCharacter;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("triggerKind", this.triggerKind);
-    b.add("triggerCharacter", this.triggerCharacter);
-    return b.toString();
   }
   
   @Override

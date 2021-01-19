@@ -15,7 +15,6 @@ import java.util.List;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Format document on type options
@@ -74,14 +73,6 @@ public class DocumentOnTypeFormattingOptions {
    */
   public void setMoreTriggerCharacter(final List<String> moreTriggerCharacter) {
     this.moreTriggerCharacter = moreTriggerCharacter;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("firstTriggerCharacter", this.firstTriggerCharacter);
-    b.add("moreTriggerCharacter", this.moreTriggerCharacter);
-    return b.toString();
   }
   
   @Override

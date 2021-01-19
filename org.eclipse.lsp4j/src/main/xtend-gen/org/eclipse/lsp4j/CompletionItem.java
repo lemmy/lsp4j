@@ -27,7 +27,6 @@ import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The Completion request is sent from the client to the server to compute completion items at a given cursor position.
@@ -537,29 +536,6 @@ public class CompletionItem {
    */
   public void setData(final Object data) {
     this.data = data;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("label", this.label);
-    b.add("kind", this.kind);
-    b.add("tags", this.tags);
-    b.add("detail", this.detail);
-    b.add("documentation", this.documentation);
-    b.add("deprecated", this.deprecated);
-    b.add("preselect", this.preselect);
-    b.add("sortText", this.sortText);
-    b.add("filterText", this.filterText);
-    b.add("insertText", this.insertText);
-    b.add("insertTextFormat", this.insertTextFormat);
-    b.add("insertTextMode", this.insertTextMode);
-    b.add("textEdit", this.textEdit);
-    b.add("additionalTextEdits", this.additionalTextEdits);
-    b.add("commitCharacters", this.commitCharacters);
-    b.add("command", this.command);
-    b.add("data", this.data);
-    return b.toString();
   }
   
   @Override

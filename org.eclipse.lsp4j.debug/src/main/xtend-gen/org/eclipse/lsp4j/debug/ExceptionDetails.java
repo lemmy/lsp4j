@@ -13,7 +13,6 @@ package org.eclipse.lsp4j.debug;
 
 import java.util.Arrays;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Detailed information about an exception that has occurred.
@@ -174,18 +173,6 @@ public class ExceptionDetails {
    */
   public void setInnerException(final ExceptionDetails[] innerException) {
     this.innerException = innerException;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("message", this.message);
-    b.add("typeName", this.typeName);
-    b.add("fullTypeName", this.fullTypeName);
-    b.add("evaluateName", this.evaluateName);
-    b.add("stackTrace", this.stackTrace);
-    b.add("innerException", this.innerException);
-    return b.toString();
   }
   
   @Override

@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.DynamicRegistrationCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to the `textDocument/declaration`
@@ -52,14 +51,6 @@ public class DeclarationCapabilities extends DynamicRegistrationCapabilities {
    */
   public void setLinkSupport(final Boolean linkSupport) {
     this.linkSupport = linkSupport;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("linkSupport", this.linkSupport);
-    b.add("dynamicRegistration", getDynamicRegistration());
-    return b.toString();
   }
   
   @Override

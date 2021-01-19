@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.jsonrpc.json.adapters.JsonElementTypeAdapter;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A notification sent from the client to the server to signal the change of configuration settings.
@@ -51,13 +50,6 @@ public class DidChangeConfigurationParams {
    */
   public void setSettings(@NonNull final Object settings) {
     this.settings = Preconditions.checkNotNull(settings, "settings");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("settings", this.settings);
-    return b.toString();
   }
   
   @Override

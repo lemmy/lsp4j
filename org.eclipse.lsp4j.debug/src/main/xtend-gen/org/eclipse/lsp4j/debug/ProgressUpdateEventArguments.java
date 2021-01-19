@@ -14,7 +14,6 @@ package org.eclipse.lsp4j.debug;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The event signals that the progress reporting needs to updated with a new message and/or percentage.
@@ -99,15 +98,6 @@ public class ProgressUpdateEventArguments {
    */
   public void setPercentage(final Double percentage) {
     this.percentage = percentage;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("progressId", this.progressId);
-    b.add("message", this.message);
-    b.add("percentage", this.percentage);
-    return b.toString();
   }
   
   @Override

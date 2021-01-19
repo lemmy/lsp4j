@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.Range;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class ColorInformation {
@@ -70,14 +69,6 @@ public class ColorInformation {
    */
   public void setColor(@NonNull final Color color) {
     this.color = Preconditions.checkNotNull(color, "color");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("range", this.range);
-    b.add("color", this.color);
-    return b.toString();
   }
   
   @Override

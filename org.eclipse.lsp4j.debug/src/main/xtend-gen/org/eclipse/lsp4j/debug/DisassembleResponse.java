@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.debug.DisassembledInstruction;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Response to 'disassemble' request.
@@ -43,13 +42,6 @@ public class DisassembleResponse {
    */
   public void setInstructions(@NonNull final DisassembledInstruction[] instructions) {
     this.instructions = Preconditions.checkNotNull(instructions, "instructions");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("instructions", this.instructions);
-    return b.toString();
   }
   
   @Override

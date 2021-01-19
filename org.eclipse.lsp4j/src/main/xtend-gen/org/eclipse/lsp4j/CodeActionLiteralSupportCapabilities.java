@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.CodeActionKindCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class CodeActionLiteralSupportCapabilities {
@@ -45,13 +44,6 @@ public class CodeActionLiteralSupportCapabilities {
    */
   public void setCodeActionKind(final CodeActionKindCapabilities codeActionKind) {
     this.codeActionKind = codeActionKind;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("codeActionKind", this.codeActionKind);
-    return b.toString();
   }
   
   @Override

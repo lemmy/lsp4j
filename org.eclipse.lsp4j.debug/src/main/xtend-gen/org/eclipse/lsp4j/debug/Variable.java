@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.debug.VariablePresentationHint;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A Variable is a name/value pair.
@@ -293,21 +292,6 @@ public class Variable {
    */
   public void setMemoryReference(final String memoryReference) {
     this.memoryReference = memoryReference;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("name", this.name);
-    b.add("value", this.value);
-    b.add("type", this.type);
-    b.add("presentationHint", this.presentationHint);
-    b.add("evaluateName", this.evaluateName);
-    b.add("variablesReference", this.variablesReference);
-    b.add("namedVariables", this.namedVariables);
-    b.add("indexedVariables", this.indexedVariables);
-    b.add("memoryReference", this.memoryReference);
-    return b.toString();
   }
   
   @Override

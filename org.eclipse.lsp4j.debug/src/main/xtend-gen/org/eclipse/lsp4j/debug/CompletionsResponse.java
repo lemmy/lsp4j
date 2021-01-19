@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.debug.CompletionItem;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Response to 'completions' request.
@@ -43,13 +42,6 @@ public class CompletionsResponse {
    */
   public void setTargets(@NonNull final CompletionItem[] targets) {
     this.targets = Preconditions.checkNotNull(targets, "targets");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("targets", this.targets);
-    return b.toString();
   }
   
   @Override

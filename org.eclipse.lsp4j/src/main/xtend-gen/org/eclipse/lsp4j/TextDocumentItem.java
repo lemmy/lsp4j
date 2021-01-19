@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * An item to transfer a text document from the client to the server.
@@ -115,16 +114,6 @@ public class TextDocumentItem {
    */
   public void setText(@NonNull final String text) {
     this.text = Preconditions.checkNotNull(text, "text");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("uri", this.uri);
-    b.add("languageId", this.languageId);
-    b.add("version", this.version);
-    b.add("text", this.text);
-    return b.toString();
   }
   
   @Override

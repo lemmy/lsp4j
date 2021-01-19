@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The result of an show document request.
@@ -46,13 +45,6 @@ public class ShowDocumentResult {
    */
   public void setSuccess(final boolean success) {
     this.success = success;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("success", this.success);
-    return b.toString();
   }
   
   @Override

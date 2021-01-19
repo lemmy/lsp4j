@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.debug.Source;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Response to 'loadedSources' request.
@@ -43,13 +42,6 @@ public class LoadedSourcesResponse {
    */
   public void setSources(@NonNull final Source[] sources) {
     this.sources = Preconditions.checkNotNull(sources, "sources");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("sources", this.sources);
-    return b.toString();
   }
   
   @Override

@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.DynamicRegistrationCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The client has support for file requests/notifications.
@@ -143,19 +142,6 @@ public class FileOperationsWorkspaceCapabilities extends DynamicRegistrationCapa
    */
   public void setWillDelete(final Boolean willDelete) {
     this.willDelete = willDelete;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("didCreate", this.didCreate);
-    b.add("willCreate", this.willCreate);
-    b.add("didRename", this.didRename);
-    b.add("willRename", this.willRename);
-    b.add("didDelete", this.didDelete);
-    b.add("willDelete", this.willDelete);
-    b.add("dynamicRegistration", getDynamicRegistration());
-    return b.toString();
   }
   
   @Override

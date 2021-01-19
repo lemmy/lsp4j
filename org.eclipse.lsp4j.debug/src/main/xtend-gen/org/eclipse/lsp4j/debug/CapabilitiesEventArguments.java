@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.debug.Capabilities;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The event indicates that one or more capabilities have changed.
@@ -50,13 +49,6 @@ public class CapabilitiesEventArguments {
    */
   public void setCapabilities(@NonNull final Capabilities capabilities) {
     this.capabilities = Preconditions.checkNotNull(capabilities, "capabilities");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("capabilities", this.capabilities);
-    return b.toString();
   }
   
   @Override

@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A document filter denotes a document through properties like language, schema or pattern.
@@ -86,15 +85,6 @@ public class DocumentFilter {
    */
   public void setPattern(final String pattern) {
     this.pattern = pattern;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("language", this.language);
-    b.add("scheme", this.scheme);
-    b.add("pattern", this.pattern);
-    return b.toString();
   }
   
   @Override

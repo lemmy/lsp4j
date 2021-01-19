@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.FileOperationPatternOptions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A pattern to describe in which file operation requests or notifications
@@ -129,15 +128,6 @@ public class FileOperationPattern {
    */
   public void setOptions(final FileOperationPatternOptions options) {
     this.options = options;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("glob", this.glob);
-    b.add("matches", this.matches);
-    b.add("options", this.options);
-    return b.toString();
   }
   
   @Override

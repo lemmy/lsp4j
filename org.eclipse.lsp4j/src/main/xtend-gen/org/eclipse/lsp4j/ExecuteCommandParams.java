@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The workspace/executeCommand request is sent from the client to the server to trigger command
@@ -122,15 +121,6 @@ public class ExecuteCommandParams implements WorkDoneProgressParams {
    */
   public void setArguments(final List<Object> arguments) {
     this.arguments = arguments;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("workDoneToken", this.workDoneToken);
-    b.add("command", this.command);
-    b.add("arguments", this.arguments);
-    return b.toString();
   }
   
   @Override

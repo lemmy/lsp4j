@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.Unregistration;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The client/unregisterCapability request is sent from the server to the client to unregister
@@ -44,13 +43,6 @@ public class UnregistrationParams {
   
   public void setUnregisterations(@NonNull final List<Unregistration> unregisterations) {
     this.unregisterations = Preconditions.checkNotNull(unregisterations, "unregisterations");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("unregisterations", this.unregisterations);
-    return b.toString();
   }
   
   @Override

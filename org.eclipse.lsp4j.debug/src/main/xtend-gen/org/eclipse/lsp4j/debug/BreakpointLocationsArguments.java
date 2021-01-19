@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.debug.Source;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'breakpointLocations' request.
@@ -152,17 +151,6 @@ public class BreakpointLocationsArguments {
    */
   public void setEndColumn(final Integer endColumn) {
     this.endColumn = endColumn;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("source", this.source);
-    b.add("line", this.line);
-    b.add("column", this.column);
-    b.add("endLine", this.endLine);
-    b.add("endColumn", this.endColumn);
-    return b.toString();
   }
   
   @Override

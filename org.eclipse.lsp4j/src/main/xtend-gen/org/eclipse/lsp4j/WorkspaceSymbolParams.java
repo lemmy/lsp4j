@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.WorkDoneProgressAndPartialResultParams;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The parameters of a Workspace Symbol Request.
@@ -52,15 +51,6 @@ public class WorkspaceSymbolParams extends WorkDoneProgressAndPartialResultParam
    */
   public void setQuery(@NonNull final String query) {
     this.query = Preconditions.checkNotNull(query, "query");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("query", this.query);
-    b.add("workDoneToken", getWorkDoneToken());
-    b.add("partialResultToken", getPartialResultToken());
-    return b.toString();
   }
   
   @Override

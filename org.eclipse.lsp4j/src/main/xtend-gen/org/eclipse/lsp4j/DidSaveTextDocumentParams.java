@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.TextDocumentIdentifier;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The document save notification is sent from the client to the server when the document was saved in the client.
@@ -77,14 +76,6 @@ public class DidSaveTextDocumentParams {
    */
   public void setText(final String text) {
     this.text = text;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("textDocument", this.textDocument);
-    b.add("text", this.text);
-    return b.toString();
   }
   
   @Override

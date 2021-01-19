@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.TextDocumentRegistrationOptions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class DocumentOnTypeFormattingRegistrationOptions extends TextDocumentRegistrationOptions {
@@ -72,15 +71,6 @@ public class DocumentOnTypeFormattingRegistrationOptions extends TextDocumentReg
    */
   public void setMoreTriggerCharacter(final List<String> moreTriggerCharacter) {
     this.moreTriggerCharacter = moreTriggerCharacter;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("firstTriggerCharacter", this.firstTriggerCharacter);
-    b.add("moreTriggerCharacter", this.moreTriggerCharacter);
-    b.add("documentSelector", getDocumentSelector());
-    return b.toString();
   }
   
   @Override

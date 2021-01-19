@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j.debug;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The event indicates that the execution of the debuggee has continued.
@@ -68,14 +67,6 @@ public class ContinuedEventArguments {
    */
   public void setAllThreadsContinued(final Boolean allThreadsContinued) {
     this.allThreadsContinued = allThreadsContinued;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("threadId", this.threadId);
-    b.add("allThreadsContinued", this.allThreadsContinued);
-    return b.toString();
   }
   
   @Override

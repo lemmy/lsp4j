@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.debug.RunInTerminalRequestArgumentsKind;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'runInTerminal' request.
@@ -144,17 +143,6 @@ public class RunInTerminalRequestArguments {
    */
   public void setEnv(final Map<String, String> env) {
     this.env = env;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("kind", this.kind);
-    b.add("title", this.title);
-    b.add("cwd", this.cwd);
-    b.add("args", this.args);
-    b.add("env", this.env);
-    return b.toString();
   }
   
   @Override

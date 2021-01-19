@@ -15,7 +15,6 @@ import java.util.List;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The legend used by the server
@@ -71,14 +70,6 @@ public class SemanticTokensLegend {
    */
   public void setTokenModifiers(@NonNull final List<String> tokenModifiers) {
     this.tokenModifiers = Preconditions.checkNotNull(tokenModifiers, "tokenModifiers");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("tokenTypes", this.tokenTypes);
-    b.add("tokenModifiers", this.tokenModifiers);
-    return b.toString();
   }
   
   @Override

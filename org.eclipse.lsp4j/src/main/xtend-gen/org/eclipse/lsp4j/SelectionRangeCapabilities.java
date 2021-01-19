@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.DynamicRegistrationCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to `textDocument/selectionRange` requests
@@ -27,13 +26,6 @@ public class SelectionRangeCapabilities extends DynamicRegistrationCapabilities 
   
   public SelectionRangeCapabilities(final Boolean dynamicRegistration) {
     super(dynamicRegistration);
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("dynamicRegistration", getDynamicRegistration());
-    return b.toString();
   }
   
   @Override

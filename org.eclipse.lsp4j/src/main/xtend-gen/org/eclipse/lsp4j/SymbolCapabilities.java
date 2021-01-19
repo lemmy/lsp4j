@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.DynamicRegistrationCapabilities;
 import org.eclipse.lsp4j.SymbolKindCapabilities;
 import org.eclipse.lsp4j.SymbolTagSupportCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to the `workspace/symbol` request.
@@ -86,15 +85,6 @@ public class SymbolCapabilities extends DynamicRegistrationCapabilities {
    */
   public void setTagSupport(final SymbolTagSupportCapabilities tagSupport) {
     this.tagSupport = tagSupport;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("symbolKind", this.symbolKind);
-    b.add("tagSupport", this.tagSupport);
-    b.add("dynamicRegistration", getDynamicRegistration());
-    return b.toString();
   }
   
   @Override

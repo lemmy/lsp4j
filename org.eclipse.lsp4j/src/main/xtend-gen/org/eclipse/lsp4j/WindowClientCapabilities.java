@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.ShowDocumentCapabilities;
 import org.eclipse.lsp4j.WindowShowMessageRequestCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Window specific client capabilities.
@@ -100,15 +99,6 @@ public class WindowClientCapabilities {
    */
   public void setShowDocument(final ShowDocumentCapabilities showDocument) {
     this.showDocument = showDocument;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("workDoneProgress", this.workDoneProgress);
-    b.add("showMessage", this.showMessage);
-    b.add("showDocument", this.showDocument);
-    return b.toString();
   }
   
   @Override

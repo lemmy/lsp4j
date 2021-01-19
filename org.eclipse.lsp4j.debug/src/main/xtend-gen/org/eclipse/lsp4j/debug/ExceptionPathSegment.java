@@ -15,7 +15,6 @@ import java.util.Arrays;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * An ExceptionPathSegment represents a segment in a path that is used to match leafs or nodes in a tree of
@@ -76,14 +75,6 @@ public class ExceptionPathSegment {
    */
   public void setNames(@NonNull final String[] names) {
     this.names = Preconditions.checkNotNull(names, "names");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("negate", this.negate);
-    b.add("names", this.names);
-    return b.toString();
   }
   
   @Override

@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.TextDocumentRegistrationOptions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Static registration options to be returned in the initialize request.
@@ -48,14 +47,6 @@ public class StaticRegistrationOptions extends TextDocumentRegistrationOptions {
    */
   public void setId(final String id) {
     this.id = id;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("id", this.id);
-    b.add("documentSelector", getDocumentSelector());
-    return b.toString();
   }
   
   @Override

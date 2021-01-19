@@ -22,7 +22,6 @@ import org.eclipse.xtend.lib.macro.declaration.MutableClassDeclaration
 import org.eclipse.xtend.lib.macro.declaration.MutableFieldDeclaration
 import org.eclipse.xtend.lib.macro.declaration.Type
 import org.eclipse.xtend.lib.macro.declaration.Visibility
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder
 
 class JsonRpcDataProcessor extends AbstractClassProcessor {
 
@@ -35,8 +34,6 @@ class JsonRpcDataProcessor extends AbstractClassProcessor {
 			annotationTypeDeclaration == JsonRpcData.findTypeGlobally
 		])
 		impl.generateImplMembers(new JsonRpcDataTransformationContext(context))
-
-		generateToString(impl, context)
 
 		val shouldIncludeSuper = impl.extendedClass.type != Object.newTypeReference.type
 		val equalsHashCodeUtil = new EqualsHashCodeProcessor.Util(context)
@@ -136,28 +133,6 @@ class JsonRpcDataProcessor extends AbstractClassProcessor {
 				this.«field.simpleName» = «compileNewEither»;
 			«ENDIF»
 		'''
-	}
-
-	protected def generateToString(MutableClassDeclaration impl, extension TransformationContext context) {
-		val toStringFields = newArrayList
-		var ClassDeclaration c = impl
-		do {
-			toStringFields += c.declaredFields
-			c = c.extendedClass?.type as ClassDeclaration
-		} while (c !== null && c != object)
-		impl.addMethod("toString") [
-			returnType = string
-			addAnnotation(newAnnotationReference(Override))
-			val accessorsUtil = new AccessorsProcessor.Util(context)
-			body = '''
-				«ToStringBuilder» b = new «ToStringBuilder»(this);
-				«FOR field : toStringFields»
-					b.add("«field.simpleName»", «IF field.declaringType == impl»this.«field.simpleName»«ELSE»«
-						accessorsUtil.getGetterName(field)»()«ENDIF»);
-				«ENDFOR»
-				return b.toString();
-			'''
-		]
 	}
 	
 	private def getPreconditionsUtil(Type type, extension TransformationContext context) {

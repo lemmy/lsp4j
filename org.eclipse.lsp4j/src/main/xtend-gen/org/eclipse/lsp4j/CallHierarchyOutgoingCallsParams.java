@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.WorkDoneProgressAndPartialResultParams;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The parameter of a `callHierarchy/outgoingCalls` request.
@@ -43,15 +42,6 @@ public class CallHierarchyOutgoingCallsParams extends WorkDoneProgressAndPartial
   
   public void setItem(@NonNull final CallHierarchyItem item) {
     this.item = Preconditions.checkNotNull(item, "item");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("item", this.item);
-    b.add("workDoneToken", getWorkDoneToken());
-    b.add("partialResultToken", getPartialResultToken());
-    return b.toString();
   }
   
   @Override

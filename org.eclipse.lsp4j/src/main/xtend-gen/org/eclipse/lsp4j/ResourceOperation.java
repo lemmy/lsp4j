@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.adapters.ResourceOperationTypeAdapter;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @JsonAdapter(ResourceOperationTypeAdapter.class)
 @SuppressWarnings("all")
@@ -74,14 +73,6 @@ public abstract class ResourceOperation {
    */
   public void setAnnotationId(final String annotationId) {
     this.annotationId = annotationId;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("kind", this.kind);
-    b.add("annotationId", this.annotationId);
-    return b.toString();
   }
   
   @Override

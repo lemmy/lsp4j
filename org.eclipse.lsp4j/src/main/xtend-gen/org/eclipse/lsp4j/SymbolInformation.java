@@ -20,7 +20,6 @@ import org.eclipse.lsp4j.adapters.SymbolInformationTypeAdapter;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Represents information about programming constructs like variables, classes, interfaces etc.
@@ -214,18 +213,6 @@ public class SymbolInformation {
    */
   public void setContainerName(final String containerName) {
     this.containerName = containerName;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("name", this.name);
-    b.add("kind", this.kind);
-    b.add("tags", this.tags);
-    b.add("deprecated", this.deprecated);
-    b.add("location", this.location);
-    b.add("containerName", this.containerName);
-    return b.toString();
   }
   
   @Override

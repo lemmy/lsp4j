@@ -13,21 +13,12 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.ExecuteCommandOptions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Execute command registration options.
  */
 @SuppressWarnings("all")
 public class ExecuteCommandRegistrationOptions extends ExecuteCommandOptions {
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("commands", getCommands());
-    b.add("workDoneProgress", getWorkDoneProgress());
-    return b.toString();
-  }
-  
   @Override
   @Pure
   public boolean equals(final Object obj) {

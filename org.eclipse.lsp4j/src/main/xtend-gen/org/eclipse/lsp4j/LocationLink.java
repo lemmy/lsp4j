@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.Range;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Represents a link between a source and a target location.
@@ -138,16 +137,6 @@ public class LocationLink {
    */
   public void setTargetSelectionRange(@NonNull final Range targetSelectionRange) {
     this.targetSelectionRange = Preconditions.checkNotNull(targetSelectionRange, "targetSelectionRange");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("originSelectionRange", this.originSelectionRange);
-    b.add("targetUri", this.targetUri);
-    b.add("targetRange", this.targetRange);
-    b.add("targetSelectionRange", this.targetSelectionRange);
-    return b.toString();
   }
   
   @Override

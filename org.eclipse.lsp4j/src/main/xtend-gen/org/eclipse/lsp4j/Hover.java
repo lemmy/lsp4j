@@ -22,7 +22,6 @@ import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The result of a hover request.
@@ -113,14 +112,6 @@ public class Hover {
    */
   public void setRange(final Range range) {
     this.range = range;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("contents", this.contents);
-    b.add("range", this.range);
-    return b.toString();
   }
   
   @Override

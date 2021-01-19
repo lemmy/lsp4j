@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.WorkspaceEdit;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The workspace/applyEdit request is sent from the server to the client to modify resource on the client side.
@@ -80,14 +79,6 @@ public class ApplyWorkspaceEditParams {
    */
   public void setLabel(final String label) {
     this.label = label;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("edit", this.edit);
-    b.add("label", this.label);
-    return b.toString();
   }
   
   @Override

@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A ConfigurationItem consist of the configuration section to ask for and an additional scope URI.
@@ -67,14 +66,6 @@ public class ConfigurationItem {
    */
   public void setSection(final String section) {
     this.section = section;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("scopeUri", this.scopeUri);
-    b.add("section", this.section);
-    return b.toString();
   }
   
   @Override

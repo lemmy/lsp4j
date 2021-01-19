@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.debug.Source;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The event indicates that some source has been added, changed, or removed from the set of all loaded sources.
@@ -65,14 +64,6 @@ public class LoadedSourceEventArguments {
    */
   public void setSource(@NonNull final Source source) {
     this.source = Preconditions.checkNotNull(source, "source");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("reason", this.reason);
-    b.add("source", this.source);
-    return b.toString();
   }
   
   @Override

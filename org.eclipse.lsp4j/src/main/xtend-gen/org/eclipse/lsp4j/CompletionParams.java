@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.TextDocumentIdentifier;
 import org.eclipse.lsp4j.TextDocumentPositionAndWorkDoneProgressAndPartialResultParams;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The Completion request is sent from the client to the server to compute completion items at a given cursor position.
@@ -57,18 +56,6 @@ public class CompletionParams extends TextDocumentPositionAndWorkDoneProgressAnd
    */
   public void setContext(final CompletionContext context) {
     this.context = context;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("context", this.context);
-    b.add("partialResultToken", getPartialResultToken());
-    b.add("workDoneToken", getWorkDoneToken());
-    b.add("textDocument", getTextDocument());
-    b.add("uri", getUri());
-    b.add("position", getPosition());
-    return b.toString();
   }
   
   @Override

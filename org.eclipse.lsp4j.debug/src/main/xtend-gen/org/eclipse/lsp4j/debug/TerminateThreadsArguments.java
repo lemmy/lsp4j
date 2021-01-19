@@ -13,7 +13,6 @@ package org.eclipse.lsp4j.debug;
 
 import java.util.Arrays;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'terminateThreads' request.
@@ -44,13 +43,6 @@ public class TerminateThreadsArguments {
    */
   public void setThreadIds(final int[] threadIds) {
     this.threadIds = threadIds;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("threadIds", this.threadIds);
-    return b.toString();
   }
   
   @Override

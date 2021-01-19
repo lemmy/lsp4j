@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.debug.CompletionItemType;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * CompletionItems are the suggestions returned from the CompletionsRequest.
@@ -266,20 +265,6 @@ public class CompletionItem {
    */
   public void setSelectionLength(final Integer selectionLength) {
     this.selectionLength = selectionLength;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("label", this.label);
-    b.add("text", this.text);
-    b.add("sortText", this.sortText);
-    b.add("type", this.type);
-    b.add("start", this.start);
-    b.add("length", this.length);
-    b.add("selectionStart", this.selectionStart);
-    b.add("selectionLength", this.selectionLength);
-    return b.toString();
   }
   
   @Override

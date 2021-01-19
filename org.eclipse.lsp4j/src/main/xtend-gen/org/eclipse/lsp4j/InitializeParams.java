@@ -21,7 +21,6 @@ import org.eclipse.lsp4j.adapters.InitializeParamsTypeAdapter;
 import org.eclipse.lsp4j.jsonrpc.json.adapters.JsonElementTypeAdapter;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The initialize request is sent as the first request from the client to the server.
@@ -342,23 +341,6 @@ public class InitializeParams implements WorkDoneProgressParams {
    */
   public void setWorkspaceFolders(final List<WorkspaceFolder> workspaceFolders) {
     this.workspaceFolders = workspaceFolders;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("workDoneToken", this.workDoneToken);
-    b.add("processId", this.processId);
-    b.add("rootPath", this.rootPath);
-    b.add("rootUri", this.rootUri);
-    b.add("initializationOptions", this.initializationOptions);
-    b.add("capabilities", this.capabilities);
-    b.add("clientName", this.clientName);
-    b.add("clientInfo", this.clientInfo);
-    b.add("locale", this.locale);
-    b.add("trace", this.trace);
-    b.add("workspaceFolders", this.workspaceFolders);
-    return b.toString();
   }
   
   @Override

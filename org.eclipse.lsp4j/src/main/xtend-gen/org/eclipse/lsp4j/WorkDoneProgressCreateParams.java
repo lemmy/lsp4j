@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The {@code window/workDoneProgress/create} request is sent from the server to the client to ask the client to create a work done progress.
@@ -67,13 +66,6 @@ public class WorkDoneProgressCreateParams {
       return;
     }
     this.token = Either.forRight(token);
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("token", this.token);
-    return b.toString();
   }
   
   @Override

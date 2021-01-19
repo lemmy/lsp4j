@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.DiagnosticsTagSupport;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to `textDocument/publishDiagnostics`.
@@ -203,17 +202,6 @@ public class PublishDiagnosticsCapabilities {
    */
   public void setDataSupport(final Boolean dataSupport) {
     this.dataSupport = dataSupport;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("relatedInformation", this.relatedInformation);
-    b.add("tagSupport", this.tagSupport);
-    b.add("versionSupport", this.versionSupport);
-    b.add("codeDescriptionSupport", this.codeDescriptionSupport);
-    b.add("dataSupport", this.dataSupport);
-    return b.toString();
   }
   
   @Override

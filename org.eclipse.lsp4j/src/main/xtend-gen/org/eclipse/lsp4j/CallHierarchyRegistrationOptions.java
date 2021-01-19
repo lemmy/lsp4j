@@ -13,21 +13,12 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.AbstractTextDocumentRegistrationAndWorkDoneProgressOptions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Since 3.16.0
  */
 @SuppressWarnings("all")
 public class CallHierarchyRegistrationOptions extends AbstractTextDocumentRegistrationAndWorkDoneProgressOptions {
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("workDoneProgress", getWorkDoneProgress());
-    b.add("documentSelector", getDocumentSelector());
-    return b.toString();
-  }
-  
   @Override
   @Pure
   public boolean equals(final Object obj) {

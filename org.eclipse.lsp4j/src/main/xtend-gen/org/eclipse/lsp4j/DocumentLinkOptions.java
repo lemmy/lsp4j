@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Document link options
@@ -44,13 +43,6 @@ public class DocumentLinkOptions {
    */
   public void setResolveProvider(final Boolean resolveProvider) {
     this.resolveProvider = resolveProvider;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("resolveProvider", this.resolveProvider);
-    return b.toString();
   }
   
   @Override

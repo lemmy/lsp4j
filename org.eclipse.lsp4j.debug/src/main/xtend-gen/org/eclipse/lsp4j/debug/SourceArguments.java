@@ -13,7 +13,6 @@ package org.eclipse.lsp4j.debug;
 
 import org.eclipse.lsp4j.debug.Source;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'source' request.
@@ -70,14 +69,6 @@ public class SourceArguments {
    */
   public void setSourceReference(final int sourceReference) {
     this.sourceReference = sourceReference;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("source", this.source);
-    b.add("sourceReference", this.sourceReference);
-    return b.toString();
   }
   
   @Override

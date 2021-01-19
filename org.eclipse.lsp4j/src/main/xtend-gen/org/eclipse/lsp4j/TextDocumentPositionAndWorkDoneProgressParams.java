@@ -18,7 +18,6 @@ import org.eclipse.lsp4j.WorkDoneProgressParams;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Abstract class which extends TextDocumentPosition and implements work done progress request parameter.
@@ -69,16 +68,6 @@ public abstract class TextDocumentPositionAndWorkDoneProgressParams extends Text
       return;
     }
     this.workDoneToken = Either.forRight(workDoneToken);
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("workDoneToken", this.workDoneToken);
-    b.add("textDocument", getTextDocument());
-    b.add("uri", getUri());
-    b.add("position", getPosition());
-    return b.toString();
   }
   
   @Override

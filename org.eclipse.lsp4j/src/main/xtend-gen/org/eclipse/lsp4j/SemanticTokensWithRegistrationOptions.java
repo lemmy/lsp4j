@@ -20,7 +20,6 @@ import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Since 3.16.0
@@ -181,17 +180,6 @@ public class SemanticTokensWithRegistrationOptions extends AbstractWorkDoneProgr
    */
   public void setDocumentSelector(final List<DocumentFilter> documentSelector) {
     this.documentSelector = documentSelector;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("legend", this.legend);
-    b.add("range", this.range);
-    b.add("full", this.full);
-    b.add("documentSelector", this.documentSelector);
-    b.add("workDoneProgress", getWorkDoneProgress());
-    return b.toString();
   }
   
   @Override

@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The {@code window/workDoneProgress/cancel} notification is sent from the client to the server to cancel a progress initiated on the server side using the
@@ -68,13 +67,6 @@ public class WorkDoneProgressCancelParams {
       return;
     }
     this.token = Either.forRight(token);
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("token", this.token);
-    return b.toString();
   }
   
   @Override

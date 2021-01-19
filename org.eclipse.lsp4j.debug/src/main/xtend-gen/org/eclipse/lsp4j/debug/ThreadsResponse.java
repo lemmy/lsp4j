@@ -15,7 +15,6 @@ import java.util.Arrays;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Response to 'threads' request.
@@ -42,13 +41,6 @@ public class ThreadsResponse {
    */
   public void setThreads(@NonNull final org.eclipse.lsp4j.debug.Thread[] threads) {
     this.threads = Preconditions.checkNotNull(threads, "threads");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("threads", this.threads);
-    return b.toString();
   }
   
   @Override

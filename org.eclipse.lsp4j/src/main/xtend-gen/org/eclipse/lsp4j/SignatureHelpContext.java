@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.SignatureHelpTriggerKind;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Additional information about the context in which a signature help request was triggered.
@@ -137,16 +136,6 @@ public class SignatureHelpContext {
    */
   public void setActiveSignatureHelp(final SignatureHelp activeSignatureHelp) {
     this.activeSignatureHelp = activeSignatureHelp;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("triggerKind", this.triggerKind);
-    b.add("triggerCharacter", this.triggerCharacter);
-    b.add("isRetrigger", this.isRetrigger);
-    b.add("activeSignatureHelp", this.activeSignatureHelp);
-    return b.toString();
   }
   
   @Override

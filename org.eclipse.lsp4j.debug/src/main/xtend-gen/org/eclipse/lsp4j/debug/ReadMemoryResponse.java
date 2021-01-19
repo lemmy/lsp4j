@@ -14,7 +14,6 @@ package org.eclipse.lsp4j.debug;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Response to 'readMemory' request.
@@ -108,15 +107,6 @@ public class ReadMemoryResponse {
    */
   public void setData(final String data) {
     this.data = data;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("address", this.address);
-    b.add("unreadableBytes", this.unreadableBytes);
-    b.add("data", this.data);
-    return b.toString();
   }
   
   @Override

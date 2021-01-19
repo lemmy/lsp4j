@@ -12,19 +12,12 @@
 package org.eclipse.lsp4j.debug;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'restart' request.
  */
 @SuppressWarnings("all")
 public class RestartArguments {
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    return b.toString();
-  }
-  
   @Override
   @Pure
   public boolean equals(final Object obj) {

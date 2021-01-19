@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j.debug;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Response to 'runInTerminal' request.
@@ -69,14 +68,6 @@ public class RunInTerminalResponse {
    */
   public void setShellProcessId(final Integer shellProcessId) {
     this.shellProcessId = shellProcessId;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("processId", this.processId);
-    b.add("shellProcessId", this.shellProcessId);
-    return b.toString();
   }
   
   @Override

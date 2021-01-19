@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class ApplyWorkspaceEditResponse {
@@ -96,15 +95,6 @@ public class ApplyWorkspaceEditResponse {
    */
   public void setFailedChange(final Integer failedChange) {
     this.failedChange = failedChange;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("applied", this.applied);
-    b.add("failureReason", this.failureReason);
-    b.add("failedChange", this.failedChange);
-    return b.toString();
   }
   
   @Override

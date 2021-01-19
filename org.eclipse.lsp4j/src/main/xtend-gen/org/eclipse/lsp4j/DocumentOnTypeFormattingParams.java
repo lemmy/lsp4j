@@ -18,7 +18,6 @@ import org.eclipse.lsp4j.TextDocumentPositionParams;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The document on type formatting request is sent from the client to the server to format parts of the document during typing.
@@ -82,17 +81,6 @@ public class DocumentOnTypeFormattingParams extends TextDocumentPositionParams {
    */
   public void setCh(@NonNull final String ch) {
     this.ch = Preconditions.checkNotNull(ch, "ch");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("options", this.options);
-    b.add("ch", this.ch);
-    b.add("textDocument", getTextDocument());
-    b.add("uri", getUri());
-    b.add("position", getPosition());
-    return b.toString();
   }
   
   @Override

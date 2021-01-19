@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.Range;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The linked editing range response is sent from the server to the client to return the range of the symbol
@@ -92,14 +91,6 @@ public class LinkedEditingRanges {
    */
   public void setWordPattern(final String wordPattern) {
     this.wordPattern = wordPattern;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("ranges", this.ranges);
-    b.add("wordPattern", this.wordPattern);
-    return b.toString();
   }
   
   @Override

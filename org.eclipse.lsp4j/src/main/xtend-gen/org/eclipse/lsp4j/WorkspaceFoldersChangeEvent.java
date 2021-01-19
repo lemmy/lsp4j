@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.WorkspaceFolder;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The workspace folder change event.
@@ -76,14 +75,6 @@ public class WorkspaceFoldersChangeEvent {
    */
   public void setRemoved(@NonNull final List<WorkspaceFolder> removed) {
     this.removed = Preconditions.checkNotNull(removed, "removed");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("added", this.added);
-    b.add("removed", this.removed);
-    return b.toString();
   }
   
   @Override

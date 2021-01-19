@@ -14,7 +14,6 @@ package org.eclipse.lsp4j.debug;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'readMemory' request.
@@ -87,15 +86,6 @@ public class ReadMemoryArguments {
    */
   public void setCount(final int count) {
     this.count = count;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("memoryReference", this.memoryReference);
-    b.add("offset", this.offset);
-    b.add("count", this.count);
-    return b.toString();
   }
   
   @Override

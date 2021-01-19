@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.WorkDoneProgressKind;
 import org.eclipse.lsp4j.WorkDoneProgressNotification;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The notification payload about progress reporting.
@@ -53,13 +52,6 @@ public class WorkDoneProgressEnd implements WorkDoneProgressNotification {
    */
   public void setMessage(final String message) {
     this.message = message;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("message", this.message);
-    return b.toString();
   }
   
   @Override

@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.ServerInfo;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class InitializeResult {
@@ -78,14 +77,6 @@ public class InitializeResult {
    */
   public void setServerInfo(final ServerInfo serverInfo) {
     this.serverInfo = serverInfo;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("capabilities", this.capabilities);
-    b.add("serverInfo", this.serverInfo);
-    return b.toString();
   }
   
   @Override

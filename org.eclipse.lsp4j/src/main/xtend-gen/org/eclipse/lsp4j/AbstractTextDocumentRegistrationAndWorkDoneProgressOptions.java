@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.DocumentFilter;
 import org.eclipse.lsp4j.TextDocumentRegistrationOptions;
 import org.eclipse.lsp4j.WorkDoneProgressOptions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Options to signal work done progress support in server capabilities and TextDocumentRegistrationOptions.
@@ -42,14 +41,6 @@ public abstract class AbstractTextDocumentRegistrationAndWorkDoneProgressOptions
   
   public void setWorkDoneProgress(final Boolean workDoneProgress) {
     this.workDoneProgress = workDoneProgress;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("workDoneProgress", this.workDoneProgress);
-    b.add("documentSelector", getDocumentSelector());
-    return b.toString();
   }
   
   @Override

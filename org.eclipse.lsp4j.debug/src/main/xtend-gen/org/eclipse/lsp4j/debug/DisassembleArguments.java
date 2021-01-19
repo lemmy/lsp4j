@@ -14,7 +14,6 @@ package org.eclipse.lsp4j.debug;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'disassemble' request.
@@ -151,17 +150,6 @@ public class DisassembleArguments {
    */
   public void setResolveSymbols(final Boolean resolveSymbols) {
     this.resolveSymbols = resolveSymbols;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("memoryReference", this.memoryReference);
-    b.add("offset", this.offset);
-    b.add("instructionOffset", this.instructionOffset);
-    b.add("instructionCount", this.instructionCount);
-    b.add("resolveSymbols", this.resolveSymbols);
-    return b.toString();
   }
   
   @Override

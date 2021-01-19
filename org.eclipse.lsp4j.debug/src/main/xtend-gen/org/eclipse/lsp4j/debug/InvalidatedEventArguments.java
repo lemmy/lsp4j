@@ -13,7 +13,6 @@ package org.eclipse.lsp4j.debug;
 
 import java.util.Arrays;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * This event signals that some state in the debug adapter has changed and requires that the client needs to
@@ -119,15 +118,6 @@ public class InvalidatedEventArguments {
    */
   public void setStackFrameId(final Integer stackFrameId) {
     this.stackFrameId = stackFrameId;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("areas", this.areas);
-    b.add("threadId", this.threadId);
-    b.add("stackFrameId", this.stackFrameId);
-    return b.toString();
   }
   
   @Override

@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.FileChangeType;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * An event describing a file change.
@@ -72,14 +71,6 @@ public class FileEvent {
    */
   public void setType(@NonNull final FileChangeType type) {
     this.type = Preconditions.checkNotNull(type, "type");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("uri", this.uri);
-    b.add("type", this.type);
-    return b.toString();
   }
   
   @Override

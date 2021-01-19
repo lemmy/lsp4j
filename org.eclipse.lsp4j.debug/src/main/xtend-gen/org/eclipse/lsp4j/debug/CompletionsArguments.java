@@ -14,7 +14,6 @@ package org.eclipse.lsp4j.debug;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'completions' request.
@@ -122,16 +121,6 @@ public class CompletionsArguments {
    */
   public void setLine(final Integer line) {
     this.line = line;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("frameId", this.frameId);
-    b.add("text", this.text);
-    b.add("column", this.column);
-    b.add("line", this.line);
-    return b.toString();
   }
   
   @Override

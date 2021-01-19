@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import java.util.List;
 import org.eclipse.lsp4j.AbstractWorkDoneProgressOptions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Signature help options.
@@ -86,15 +85,6 @@ public class SignatureHelpOptions extends AbstractWorkDoneProgressOptions {
    */
   public void setRetriggerCharacters(final List<String> retriggerCharacters) {
     this.retriggerCharacters = retriggerCharacters;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("triggerCharacters", this.triggerCharacters);
-    b.add("retriggerCharacters", this.retriggerCharacters);
-    b.add("workDoneProgress", getWorkDoneProgress());
-    return b.toString();
   }
   
   @Override

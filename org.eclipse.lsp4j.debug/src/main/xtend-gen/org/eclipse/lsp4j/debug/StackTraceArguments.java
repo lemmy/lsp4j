@@ -13,7 +13,6 @@ package org.eclipse.lsp4j.debug;
 
 import org.eclipse.lsp4j.debug.StackFrameFormat;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'stackTrace' request.
@@ -122,16 +121,6 @@ public class StackTraceArguments {
    */
   public void setFormat(final StackFrameFormat format) {
     this.format = format;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("threadId", this.threadId);
-    b.add("startFrame", this.startFrame);
-    b.add("levels", this.levels);
-    b.add("format", this.format);
-    return b.toString();
   }
   
   @Override

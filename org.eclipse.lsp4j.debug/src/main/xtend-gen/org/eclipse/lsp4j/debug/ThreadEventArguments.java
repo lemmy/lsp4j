@@ -14,7 +14,6 @@ package org.eclipse.lsp4j.debug;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The event indicates that a thread has started or exited.
@@ -67,14 +66,6 @@ public class ThreadEventArguments {
    */
   public void setThreadId(final int threadId) {
     this.threadId = threadId;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("reason", this.reason);
-    b.add("threadId", this.threadId);
-    return b.toString();
   }
   
   @Override

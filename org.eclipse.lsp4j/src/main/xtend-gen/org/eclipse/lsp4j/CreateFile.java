@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.ResourceOperationKind;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Create file operation
@@ -78,16 +77,6 @@ public class CreateFile extends ResourceOperation {
    */
   public void setOptions(final CreateFileOptions options) {
     this.options = options;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("uri", this.uri);
-    b.add("options", this.options);
-    b.add("kind", getKind());
-    b.add("annotationId", getAnnotationId());
-    return b.toString();
   }
   
   @Override

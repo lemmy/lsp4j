@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.debug.ExceptionDetails;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Response to 'exceptionInfo' request.
@@ -117,16 +116,6 @@ public class ExceptionInfoResponse {
    */
   public void setDetails(final ExceptionDetails details) {
     this.details = details;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("exceptionId", this.exceptionId);
-    b.add("description", this.description);
-    b.add("breakMode", this.breakMode);
-    b.add("details", this.details);
-    return b.toString();
   }
   
   @Override

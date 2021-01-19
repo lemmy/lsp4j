@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.CompletionItem;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Represents a collection of completion items to be presented in the editor.
@@ -77,14 +76,6 @@ public class CompletionList {
    */
   public void setItems(@NonNull final List<CompletionItem> items) {
     this.items = Preconditions.checkNotNull(items, "items");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("isIncomplete", this.isIncomplete);
-    b.add("items", this.items);
-    return b.toString();
   }
   
   @Override

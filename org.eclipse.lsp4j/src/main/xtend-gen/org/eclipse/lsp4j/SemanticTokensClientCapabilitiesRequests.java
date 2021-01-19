@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.SemanticTokensClientCapabilitiesRequestsFull;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Since 3.16.0
@@ -118,14 +117,6 @@ public class SemanticTokensClientCapabilitiesRequests {
       return;
     }
     this.full = Either.forRight(full);
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("range", this.range);
-    b.add("full", this.full);
-    return b.toString();
   }
   
   @Override

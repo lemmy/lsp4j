@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.ConfigurationItem;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The workspace/configuration request is sent from the server to the client to fetch configuration
@@ -47,13 +46,6 @@ public class ConfigurationParams {
   
   public void setItems(@NonNull final List<ConfigurationItem> items) {
     this.items = Preconditions.checkNotNull(items, "items");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("items", this.items);
-    return b.toString();
   }
   
   @Override

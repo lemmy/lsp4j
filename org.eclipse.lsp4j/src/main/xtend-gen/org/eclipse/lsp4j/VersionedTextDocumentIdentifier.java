@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.TextDocumentIdentifier;
 import org.eclipse.lsp4j.adapters.VersionedTextDocumentIdentifierTypeAdapter;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * An identifier to denote a specific version of a text document. This information usually flows from the client to the server.
@@ -67,14 +66,6 @@ public class VersionedTextDocumentIdentifier extends TextDocumentIdentifier {
    */
   public void setVersion(final Integer version) {
     this.version = version;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("version", this.version);
-    b.add("uri", getUri());
-    return b.toString();
   }
   
   @Override

@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.CompletionItemCapabilities;
 import org.eclipse.lsp4j.CompletionItemKindCapabilities;
 import org.eclipse.lsp4j.DynamicRegistrationCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to the `textDocument/completion`
@@ -104,16 +103,6 @@ public class CompletionCapabilities extends DynamicRegistrationCapabilities {
    */
   public void setContextSupport(final Boolean contextSupport) {
     this.contextSupport = contextSupport;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("completionItem", this.completionItem);
-    b.add("completionItemKind", this.completionItemKind);
-    b.add("contextSupport", this.contextSupport);
-    b.add("dynamicRegistration", getDynamicRegistration());
-    return b.toString();
   }
   
   @Override

@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.WorkDoneProgressKind;
 import org.eclipse.lsp4j.WorkDoneProgressNotification;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The notification payload about progress reporting.
@@ -128,15 +127,6 @@ public class WorkDoneProgressReport implements WorkDoneProgressNotification {
    */
   public void setPercentage(final Integer percentage) {
     this.percentage = percentage;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("cancellable", this.cancellable);
-    b.add("message", this.message);
-    b.add("percentage", this.percentage);
-    return b.toString();
   }
   
   @Override

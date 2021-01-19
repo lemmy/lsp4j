@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j.debug;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Properties of a breakpoint or logpoint passed to the setBreakpoints request.
@@ -171,17 +170,6 @@ public class SourceBreakpoint {
    */
   public void setLogMessage(final String logMessage) {
     this.logMessage = logMessage;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("line", this.line);
-    b.add("column", this.column);
-    b.add("condition", this.condition);
-    b.add("hitCondition", this.hitCondition);
-    b.add("logMessage", this.logMessage);
-    return b.toString();
   }
   
   @Override

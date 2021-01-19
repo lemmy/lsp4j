@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.Range;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * An event describing a change to a text document. If range and rangeLength are omitted the new text is considered
@@ -105,15 +104,6 @@ public class TextDocumentContentChangeEvent {
    */
   public void setText(@NonNull final String text) {
     this.text = Preconditions.checkNotNull(text, "text");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("range", this.range);
-    b.add("rangeLength", this.rangeLength);
-    b.add("text", this.text);
-    return b.toString();
   }
   
   @Override

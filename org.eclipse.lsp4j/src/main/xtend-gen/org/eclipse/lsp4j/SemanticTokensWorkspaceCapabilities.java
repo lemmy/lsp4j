@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to the semantic token requests scoped to the
@@ -65,13 +64,6 @@ public class SemanticTokensWorkspaceCapabilities {
    */
   public void setRefreshSupport(final Boolean refreshSupport) {
     this.refreshSupport = refreshSupport;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("refreshSupport", this.refreshSupport);
-    return b.toString();
   }
   
   @Override

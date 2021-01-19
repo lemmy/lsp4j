@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.debug.StackFrame;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Response to 'stackTrace' request.
@@ -75,14 +74,6 @@ public class StackTraceResponse {
    */
   public void setTotalFrames(final Integer totalFrames) {
     this.totalFrames = totalFrames;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("stackFrames", this.stackFrames);
-    b.add("totalFrames", this.totalFrames);
-    return b.toString();
   }
   
   @Override

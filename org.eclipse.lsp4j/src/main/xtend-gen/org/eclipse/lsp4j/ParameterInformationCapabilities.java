@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Client capabilities specific to parameter information.
@@ -53,13 +52,6 @@ public class ParameterInformationCapabilities {
    */
   public void setLabelOffsetSupport(final Boolean labelOffsetSupport) {
     this.labelOffsetSupport = labelOffsetSupport;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("labelOffsetSupport", this.labelOffsetSupport);
-    return b.toString();
   }
   
   @Override

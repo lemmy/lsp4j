@@ -23,7 +23,6 @@ import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Represents a diagnostic, such as a compiler error or warning. Diagnostic objects are only valid in the scope of a resource.
@@ -281,21 +280,6 @@ public class Diagnostic {
    */
   public void setData(final Object data) {
     this.data = data;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("range", this.range);
-    b.add("severity", this.severity);
-    b.add("code", this.code);
-    b.add("codeDescription", this.codeDescription);
-    b.add("source", this.source);
-    b.add("message", this.message);
-    b.add("tags", this.tags);
-    b.add("relatedInformation", this.relatedInformation);
-    b.add("data", this.data);
-    return b.toString();
   }
   
   @Override

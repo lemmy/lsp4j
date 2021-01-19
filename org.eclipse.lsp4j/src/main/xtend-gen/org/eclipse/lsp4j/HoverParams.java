@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.TextDocumentIdentifier;
 import org.eclipse.lsp4j.TextDocumentPositionAndWorkDoneProgressParams;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The hover request is sent from the client to the server to request hover information at a given
@@ -29,16 +28,6 @@ public class HoverParams extends TextDocumentPositionAndWorkDoneProgressParams {
   
   public HoverParams(@NonNull final TextDocumentIdentifier textDocument, @NonNull final Position position) {
     super(textDocument, position);
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("workDoneToken", getWorkDoneToken());
-    b.add("textDocument", getTextDocument());
-    b.add("uri", getUri());
-    b.add("position", getPosition());
-    return b.toString();
   }
   
   @Override

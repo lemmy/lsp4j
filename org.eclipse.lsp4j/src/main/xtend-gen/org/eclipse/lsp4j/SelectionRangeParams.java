@@ -18,7 +18,6 @@ import org.eclipse.lsp4j.WorkDoneProgressAndPartialResultParams;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A parameter literal used in selection range requests.
@@ -77,16 +76,6 @@ public class SelectionRangeParams extends WorkDoneProgressAndPartialResultParams
    */
   public void setPositions(@NonNull final List<Position> positions) {
     this.positions = Preconditions.checkNotNull(positions, "positions");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("textDocument", this.textDocument);
-    b.add("positions", this.positions);
-    b.add("workDoneToken", getWorkDoneToken());
-    b.add("partialResultToken", getPartialResultToken());
-    return b.toString();
   }
   
   @Override

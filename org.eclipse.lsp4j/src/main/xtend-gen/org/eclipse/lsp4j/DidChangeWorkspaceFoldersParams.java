@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.WorkspaceFoldersChangeEvent;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The workspace/didChangeWorkspaceFolders notification is sent from the client to the server to
@@ -55,13 +54,6 @@ public class DidChangeWorkspaceFoldersParams {
    */
   public void setEvent(@NonNull final WorkspaceFoldersChangeEvent event) {
     this.event = Preconditions.checkNotNull(event, "event");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("event", this.event);
-    return b.toString();
   }
   
   @Override

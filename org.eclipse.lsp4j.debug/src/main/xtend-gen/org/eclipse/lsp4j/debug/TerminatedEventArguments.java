@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j.debug;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The event indicates that debugging of the debuggee has terminated. This does **not** mean that the debuggee
@@ -56,13 +55,6 @@ public class TerminatedEventArguments {
    */
   public void setRestart(final Object restart) {
     this.restart = restart;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("restart", this.restart);
-    return b.toString();
   }
   
   @Override

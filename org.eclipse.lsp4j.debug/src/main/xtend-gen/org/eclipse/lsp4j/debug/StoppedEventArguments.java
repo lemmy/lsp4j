@@ -14,7 +14,6 @@ package org.eclipse.lsp4j.debug;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The event indicates that the execution of the debuggee has stopped due to some condition.
@@ -210,18 +209,6 @@ public class StoppedEventArguments {
    */
   public void setAllThreadsStopped(final Boolean allThreadsStopped) {
     this.allThreadsStopped = allThreadsStopped;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("reason", this.reason);
-    b.add("description", this.description);
-    b.add("threadId", this.threadId);
-    b.add("preserveFocusHint", this.preserveFocusHint);
-    b.add("text", this.text);
-    b.add("allThreadsStopped", this.allThreadsStopped);
-    return b.toString();
   }
   
   @Override

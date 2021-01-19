@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.WorkDoneProgressAndPartialResultParams;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The request is sent from the client to the server to resolve semantic token deltas for a given whole file.
@@ -75,16 +74,6 @@ public class SemanticTokensDeltaParams extends WorkDoneProgressAndPartialResultP
    */
   public void setPreviousResultId(@NonNull final String previousResultId) {
     this.previousResultId = Preconditions.checkNotNull(previousResultId, "previousResultId");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("textDocument", this.textDocument);
-    b.add("previousResultId", this.previousResultId);
-    b.add("workDoneToken", getWorkDoneToken());
-    b.add("partialResultToken", getPartialResultToken());
-    return b.toString();
   }
   
   @Override

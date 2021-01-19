@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.DynamicRegistrationCapabilities;
 import org.eclipse.lsp4j.SymbolKindCapabilities;
 import org.eclipse.lsp4j.SymbolTagSupportCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to the `textDocument/documentSymbol`
@@ -143,17 +142,6 @@ public class DocumentSymbolCapabilities extends DynamicRegistrationCapabilities 
    */
   public void setLabelSupport(final Boolean labelSupport) {
     this.labelSupport = labelSupport;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("symbolKind", this.symbolKind);
-    b.add("hierarchicalDocumentSymbolSupport", this.hierarchicalDocumentSymbolSupport);
-    b.add("tagSupport", this.tagSupport);
-    b.add("labelSupport", this.labelSupport);
-    b.add("dynamicRegistration", getDynamicRegistration());
-    return b.toString();
   }
   
   @Override

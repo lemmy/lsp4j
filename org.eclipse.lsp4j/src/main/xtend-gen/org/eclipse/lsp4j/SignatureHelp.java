@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.SignatureInformation;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Signature help represents the signature of something callable. There can be multiple signature but only one
@@ -132,15 +131,6 @@ public class SignatureHelp {
    */
   public void setActiveParameter(final Integer activeParameter) {
     this.activeParameter = activeParameter;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("signatures", this.signatures);
-    b.add("activeSignature", this.activeSignature);
-    b.add("activeParameter", this.activeParameter);
-    return b.toString();
   }
   
   @Override

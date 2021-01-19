@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.debug.Breakpoint;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The event indicates that some information about a breakpoint has changed.
@@ -70,14 +69,6 @@ public class BreakpointEventArguments {
    */
   public void setBreakpoint(@NonNull final Breakpoint breakpoint) {
     this.breakpoint = Preconditions.checkNotNull(breakpoint, "breakpoint");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("reason", this.reason);
-    b.add("breakpoint", this.breakpoint);
-    return b.toString();
   }
   
   @Override

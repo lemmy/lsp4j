@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.FileSystemWatcher;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class DidChangeWatchedFilesRegistrationOptions {
@@ -47,13 +46,6 @@ public class DidChangeWatchedFilesRegistrationOptions {
    */
   public void setWatchers(@NonNull final List<FileSystemWatcher> watchers) {
     this.watchers = Preconditions.checkNotNull(watchers, "watchers");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("watchers", this.watchers);
-    return b.toString();
   }
   
   @Override

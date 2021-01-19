@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.Location;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Represents a related message and source code location for a diagnostic. This should be
@@ -76,14 +75,6 @@ public class DiagnosticRelatedInformation {
    */
   public void setMessage(@NonNull final String message) {
     this.message = Preconditions.checkNotNull(message, "message");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("location", this.location);
-    b.add("message", this.message);
-    return b.toString();
   }
   
   @Override

@@ -15,7 +15,6 @@ import java.util.Arrays;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Response to 'modules' request.
@@ -68,14 +67,6 @@ public class ModulesResponse {
    */
   public void setTotalModules(final Integer totalModules) {
     this.totalModules = totalModules;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("modules", this.modules);
-    b.add("totalModules", this.totalModules);
-    return b.toString();
   }
   
   @Override

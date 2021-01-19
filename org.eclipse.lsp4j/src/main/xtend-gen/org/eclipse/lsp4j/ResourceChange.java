@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import com.google.common.annotations.Beta;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A resource change.
@@ -81,14 +80,6 @@ public class ResourceChange {
    */
   public void setNewUri(final String newUri) {
     this.newUri = newUri;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("current", this.current);
-    b.add("newUri", this.newUri);
-    return b.toString();
   }
   
   @Override

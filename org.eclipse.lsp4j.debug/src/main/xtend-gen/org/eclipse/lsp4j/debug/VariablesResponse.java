@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.debug.Variable;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Response to 'variables' request.
@@ -43,13 +42,6 @@ public class VariablesResponse {
    */
   public void setVariables(@NonNull final Variable[] variables) {
     this.variables = Preconditions.checkNotNull(variables, "variables");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("variables", this.variables);
-    return b.toString();
   }
   
   @Override

@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Represents a color in RGBA space.
@@ -107,16 +106,6 @@ public class Color {
    */
   public void setAlpha(final double alpha) {
     this.alpha = alpha;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("red", this.red);
-    b.add("green", this.green);
-    b.add("blue", this.blue);
-    b.add("alpha", this.alpha);
-    return b.toString();
   }
   
   @Override

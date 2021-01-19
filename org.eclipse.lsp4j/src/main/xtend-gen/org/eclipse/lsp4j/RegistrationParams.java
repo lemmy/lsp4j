@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.Registration;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The client/registerCapability request is sent from the server to the client to register
@@ -47,13 +46,6 @@ public class RegistrationParams {
   
   public void setRegistrations(@NonNull final List<Registration> registrations) {
     this.registrations = Preconditions.checkNotNull(registrations, "registrations");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("registrations", this.registrations);
-    return b.toString();
   }
   
   @Override

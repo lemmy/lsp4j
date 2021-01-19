@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.Range;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A selection range represents a part of a selection hierarchy. A selection range
@@ -73,14 +72,6 @@ public class SelectionRange {
    */
   public void setParent(final SelectionRange parent) {
     this.parent = parent;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("range", this.range);
-    b.add("parent", this.parent);
-    return b.toString();
   }
   
   @Override

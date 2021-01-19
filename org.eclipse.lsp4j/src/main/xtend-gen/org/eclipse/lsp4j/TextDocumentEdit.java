@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.VersionedTextDocumentIdentifier;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Describes textual changes on a single text document.
@@ -76,14 +75,6 @@ public class TextDocumentEdit {
    */
   public void setEdits(@NonNull final List<TextEdit> edits) {
     this.edits = Preconditions.checkNotNull(edits, "edits");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("textDocument", this.textDocument);
-    b.add("edits", this.edits);
-    return b.toString();
   }
   
   @Override

@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.debug.SourceBreakpoint;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'setBreakpoints' request.
@@ -125,16 +124,6 @@ public class SetBreakpointsArguments {
    */
   public void setSourceModified(final Boolean sourceModified) {
     this.sourceModified = sourceModified;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("source", this.source);
-    b.add("breakpoints", this.breakpoints);
-    b.add("lines", this.lines);
-    b.add("sourceModified", this.sourceModified);
-    return b.toString();
   }
   
   @Override

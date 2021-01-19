@@ -14,7 +14,6 @@ package org.eclipse.lsp4j.debug;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'initialize' request.
@@ -359,25 +358,6 @@ public class InitializeRequestArguments {
    */
   public void setSupportsInvalidatedEvent(final Boolean supportsInvalidatedEvent) {
     this.supportsInvalidatedEvent = supportsInvalidatedEvent;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("clientID", this.clientID);
-    b.add("clientName", this.clientName);
-    b.add("adapterID", this.adapterID);
-    b.add("locale", this.locale);
-    b.add("linesStartAt1", this.linesStartAt1);
-    b.add("columnsStartAt1", this.columnsStartAt1);
-    b.add("pathFormat", this.pathFormat);
-    b.add("supportsVariableType", this.supportsVariableType);
-    b.add("supportsVariablePaging", this.supportsVariablePaging);
-    b.add("supportsRunInTerminalRequest", this.supportsRunInTerminalRequest);
-    b.add("supportsMemoryReferences", this.supportsMemoryReferences);
-    b.add("supportsProgressReporting", this.supportsProgressReporting);
-    b.add("supportsInvalidatedEvent", this.supportsInvalidatedEvent);
-    return b.toString();
   }
   
   @Override

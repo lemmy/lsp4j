@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.Range;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Represents an outgoing call, e.g. calling a getter from a method or a method from a constructor etc.
@@ -82,14 +81,6 @@ public class CallHierarchyOutgoingCall {
    */
   public void setFromRanges(@NonNull final List<Range> fromRanges) {
     this.fromRanges = Preconditions.checkNotNull(fromRanges, "fromRanges");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("to", this.to);
-    b.add("fromRanges", this.fromRanges);
-    return b.toString();
   }
   
   @Override

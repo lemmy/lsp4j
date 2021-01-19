@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * MarkedString can be used to render human readable text. It is either a markdown string
@@ -66,14 +65,6 @@ public class MarkedString {
   
   public void setValue(@NonNull final String value) {
     this.value = Preconditions.checkNotNull(value, "value");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("language", this.language);
-    b.add("value", this.value);
-    return b.toString();
   }
   
   @Override

@@ -20,7 +20,6 @@ import org.eclipse.lsp4j.SemanticTokensWorkspaceCapabilities;
 import org.eclipse.lsp4j.SymbolCapabilities;
 import org.eclipse.lsp4j.WorkspaceEditCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Workspace specific client capabilities.
@@ -284,23 +283,6 @@ public class WorkspaceClientCapabilities {
    */
   public void setFileOperations(final FileOperationsWorkspaceCapabilities fileOperations) {
     this.fileOperations = fileOperations;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("applyEdit", this.applyEdit);
-    b.add("workspaceEdit", this.workspaceEdit);
-    b.add("didChangeConfiguration", this.didChangeConfiguration);
-    b.add("didChangeWatchedFiles", this.didChangeWatchedFiles);
-    b.add("symbol", this.symbol);
-    b.add("executeCommand", this.executeCommand);
-    b.add("workspaceFolders", this.workspaceFolders);
-    b.add("configuration", this.configuration);
-    b.add("semanticTokens", this.semanticTokens);
-    b.add("codeLens", this.codeLens);
-    b.add("fileOperations", this.fileOperations);
-    return b.toString();
   }
   
   @Override

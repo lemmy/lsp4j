@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.TextEdit;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A special text edit with an additional change annotation.
@@ -53,15 +52,6 @@ public class AnnotatedTextEdit extends TextEdit {
    */
   public void setAnnotationId(@NonNull final String annotationId) {
     this.annotationId = Preconditions.checkNotNull(annotationId, "annotationId");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("annotationId", this.annotationId);
-    b.add("range", getRange());
-    b.add("newText", getNewText());
-    return b.toString();
   }
   
   @Override

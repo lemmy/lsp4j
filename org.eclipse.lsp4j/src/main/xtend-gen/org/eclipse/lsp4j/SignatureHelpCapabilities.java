@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.DynamicRegistrationCapabilities;
 import org.eclipse.lsp4j.SignatureInformationCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to the `textDocument/signatureHelp`
@@ -89,15 +88,6 @@ public class SignatureHelpCapabilities extends DynamicRegistrationCapabilities {
    */
   public void setContextSupport(final Boolean contextSupport) {
     this.contextSupport = contextSupport;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("signatureInformation", this.signatureInformation);
-    b.add("contextSupport", this.contextSupport);
-    b.add("dynamicRegistration", getDynamicRegistration());
-    return b.toString();
   }
   
   @Override

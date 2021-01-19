@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import com.google.common.annotations.Beta;
 import org.eclipse.lsp4j.DynamicRegistrationCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to the {@code textDocument/typeHierarchy}.
@@ -32,13 +31,6 @@ public class TypeHierarchyCapabilities extends DynamicRegistrationCapabilities {
   
   public TypeHierarchyCapabilities(final Boolean dynamicRegistration) {
     super(dynamicRegistration);
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("dynamicRegistration", getDynamicRegistration());
-    return b.toString();
   }
   
   @Override

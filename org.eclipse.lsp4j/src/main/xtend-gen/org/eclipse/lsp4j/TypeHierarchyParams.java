@@ -15,7 +15,6 @@ import com.google.common.annotations.Beta;
 import org.eclipse.lsp4j.TextDocumentPositionParams;
 import org.eclipse.lsp4j.TypeHierarchyDirection;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The type hierarchy request is sent from the client resolve a {@link TypeHierarchyItem type hierarchy item} for
@@ -63,17 +62,6 @@ public class TypeHierarchyParams extends TextDocumentPositionParams {
    */
   public void setDirection(final TypeHierarchyDirection direction) {
     this.direction = direction;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("resolve", this.resolve);
-    b.add("direction", this.direction);
-    b.add("textDocument", getTextDocument());
-    b.add("uri", getUri());
-    b.add("position", getPosition());
-    return b.toString();
   }
   
   @Override

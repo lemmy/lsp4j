@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import java.util.List;
 import org.eclipse.lsp4j.DynamicRegistrationCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to the `textDocument/hover`
@@ -63,14 +62,6 @@ public class HoverCapabilities extends DynamicRegistrationCapabilities {
    */
   public void setContentFormat(final List<String> contentFormat) {
     this.contentFormat = contentFormat;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("contentFormat", this.contentFormat);
-    b.add("dynamicRegistration", getDynamicRegistration());
-    return b.toString();
   }
   
   @Override

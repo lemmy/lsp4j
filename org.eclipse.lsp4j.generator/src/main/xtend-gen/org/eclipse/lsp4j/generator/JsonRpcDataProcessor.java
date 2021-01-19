@@ -12,8 +12,6 @@
 package org.eclipse.lsp4j.generator;
 
 import com.google.common.base.Objects;
-import com.google.common.collect.Iterables;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.function.Consumer;
@@ -28,26 +26,21 @@ import org.eclipse.xtend.lib.macro.AbstractClassProcessor;
 import org.eclipse.xtend.lib.macro.TransformationContext;
 import org.eclipse.xtend.lib.macro.declaration.AnnotationReference;
 import org.eclipse.xtend.lib.macro.declaration.AnnotationTypeDeclaration;
-import org.eclipse.xtend.lib.macro.declaration.ClassDeclaration;
 import org.eclipse.xtend.lib.macro.declaration.CompilationStrategy;
-import org.eclipse.xtend.lib.macro.declaration.FieldDeclaration;
 import org.eclipse.xtend.lib.macro.declaration.MutableClassDeclaration;
 import org.eclipse.xtend.lib.macro.declaration.MutableFieldDeclaration;
 import org.eclipse.xtend.lib.macro.declaration.MutableMethodDeclaration;
 import org.eclipse.xtend.lib.macro.declaration.MutableParameterDeclaration;
 import org.eclipse.xtend.lib.macro.declaration.Type;
-import org.eclipse.xtend.lib.macro.declaration.TypeDeclaration;
 import org.eclipse.xtend.lib.macro.declaration.TypeReference;
 import org.eclipse.xtend.lib.macro.declaration.Visibility;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtend2.lib.StringConcatenationClient;
-import org.eclipse.xtext.xbase.lib.CollectionLiterals;
 import org.eclipse.xtext.xbase.lib.Extension;
 import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ObjectExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class JsonRpcDataProcessor extends AbstractClassProcessor {
@@ -65,7 +58,6 @@ public class JsonRpcDataProcessor extends AbstractClassProcessor {
     impl.removeAnnotation(IterableExtensions.findFirst(impl.getAnnotations(), _function));
     JsonRpcDataTransformationContext _jsonRpcDataTransformationContext = new JsonRpcDataTransformationContext(context);
     this.generateImplMembers(impl, _jsonRpcDataTransformationContext);
-    this.generateToString(impl, context);
     Type _type = impl.getExtendedClass().getType();
     Type _type_1 = context.newTypeReference(Object.class).getType();
     final boolean shouldIncludeSuper = (!Objects.equal(_type, _type_1));
@@ -259,69 +251,6 @@ public class JsonRpcDataProcessor extends AbstractClassProcessor {
         }
       }
       _xblockexpression = _builder_1;
-    }
-    return _xblockexpression;
-  }
-  
-  protected MutableMethodDeclaration generateToString(final MutableClassDeclaration impl, @Extension final TransformationContext context) {
-    MutableMethodDeclaration _xblockexpression = null;
-    {
-      final ArrayList<FieldDeclaration> toStringFields = CollectionLiterals.<FieldDeclaration>newArrayList();
-      ClassDeclaration c = impl;
-      do {
-        {
-          Iterable<? extends FieldDeclaration> _declaredFields = c.getDeclaredFields();
-          Iterables.<FieldDeclaration>addAll(toStringFields, _declaredFields);
-          TypeReference _extendedClass = c.getExtendedClass();
-          Type _type = null;
-          if (_extendedClass!=null) {
-            _type=_extendedClass.getType();
-          }
-          c = ((ClassDeclaration) _type);
-        }
-      } while(((c != null) && (!Objects.equal(c, context.getObject()))));
-      final Procedure1<MutableMethodDeclaration> _function = (MutableMethodDeclaration it) -> {
-        it.setReturnType(context.getString());
-        it.addAnnotation(context.newAnnotationReference(Override.class));
-        final AccessorsProcessor.Util accessorsUtil = new AccessorsProcessor.Util(context);
-        StringConcatenationClient _client = new StringConcatenationClient() {
-          @Override
-          protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
-            _builder.append(ToStringBuilder.class);
-            _builder.append(" b = new ");
-            _builder.append(ToStringBuilder.class);
-            _builder.append("(this);");
-            _builder.newLineIfNotEmpty();
-            {
-              for(final FieldDeclaration field : toStringFields) {
-                _builder.append("b.add(\"");
-                String _simpleName = field.getSimpleName();
-                _builder.append(_simpleName);
-                _builder.append("\", ");
-                {
-                  TypeDeclaration _declaringType = field.getDeclaringType();
-                  boolean _equals = Objects.equal(_declaringType, impl);
-                  if (_equals) {
-                    _builder.append("this.");
-                    String _simpleName_1 = field.getSimpleName();
-                    _builder.append(_simpleName_1);
-                  } else {
-                    String _getterName = accessorsUtil.getGetterName(field);
-                    _builder.append(_getterName);
-                    _builder.append("()");
-                  }
-                }
-                _builder.append(");");
-                _builder.newLineIfNotEmpty();
-              }
-            }
-            _builder.append("return b.toString();");
-            _builder.newLine();
-          }
-        };
-        it.setBody(_client);
-      };
-      _xblockexpression = impl.addMethod("toString", _function);
     }
     return _xblockexpression;
   }

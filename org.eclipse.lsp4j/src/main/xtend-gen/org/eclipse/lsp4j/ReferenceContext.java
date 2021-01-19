@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The references request is sent from the client to the server to resolve project-wide references for the symbol
@@ -45,13 +44,6 @@ public class ReferenceContext {
    */
   public void setIncludeDeclaration(final boolean includeDeclaration) {
     this.includeDeclaration = includeDeclaration;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("includeDeclaration", this.includeDeclaration);
-    return b.toString();
   }
   
   @Override

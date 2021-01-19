@@ -15,7 +15,6 @@ import com.google.common.annotations.Beta;
 import java.util.List;
 import org.eclipse.lsp4j.WorkspaceEditChangeAnnotationSupportCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to {@link WorkspaceEdit}s
@@ -215,18 +214,6 @@ public class WorkspaceEditCapabilities {
    */
   public void setChangeAnnotationSupport(final WorkspaceEditChangeAnnotationSupportCapabilities changeAnnotationSupport) {
     this.changeAnnotationSupport = changeAnnotationSupport;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("documentChanges", this.documentChanges);
-    b.add("resourceChanges", this.resourceChanges);
-    b.add("resourceOperations", this.resourceOperations);
-    b.add("failureHandling", this.failureHandling);
-    b.add("normalizesLineEndings", this.normalizesLineEndings);
-    b.add("changeAnnotationSupport", this.changeAnnotationSupport);
-    return b.toString();
   }
   
   @Override

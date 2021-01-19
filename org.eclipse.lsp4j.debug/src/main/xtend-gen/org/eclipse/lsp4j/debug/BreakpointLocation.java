@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j.debug;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Properties of a breakpoint location returned from the 'breakpointLocations' request.
@@ -115,16 +114,6 @@ public class BreakpointLocation {
    */
   public void setEndColumn(final Integer endColumn) {
     this.endColumn = endColumn;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("line", this.line);
-    b.add("column", this.column);
-    b.add("endLine", this.endLine);
-    b.add("endColumn", this.endColumn);
-    return b.toString();
   }
   
   @Override

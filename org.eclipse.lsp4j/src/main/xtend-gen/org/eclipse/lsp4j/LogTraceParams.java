@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A notification to log the trace of the server's execution. The amount and content of these notifications
@@ -80,14 +79,6 @@ public class LogTraceParams {
    */
   public void setVerbose(final String verbose) {
     this.verbose = verbose;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("message", this.message);
-    b.add("verbose", this.verbose);
-    return b.toString();
   }
   
   @Override

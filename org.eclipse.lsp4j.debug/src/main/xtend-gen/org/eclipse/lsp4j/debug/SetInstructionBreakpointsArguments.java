@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.debug.InstructionBreakpoint;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'setInstructionBreakpoints' request
@@ -43,13 +42,6 @@ public class SetInstructionBreakpointsArguments {
    */
   public void setBreakpoints(@NonNull final InstructionBreakpoint[] breakpoints) {
     this.breakpoints = Preconditions.checkNotNull(breakpoints, "breakpoints");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("breakpoints", this.breakpoints);
-    return b.toString();
   }
   
   @Override

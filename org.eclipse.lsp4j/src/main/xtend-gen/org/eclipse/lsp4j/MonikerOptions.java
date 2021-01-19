@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.AbstractWorkDoneProgressOptions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Moniker options.
@@ -22,13 +21,6 @@ import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
  */
 @SuppressWarnings("all")
 public class MonikerOptions extends AbstractWorkDoneProgressOptions {
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("workDoneProgress", getWorkDoneProgress());
-    return b.toString();
-  }
-  
   @Override
   @Pure
   public boolean equals(final Object obj) {

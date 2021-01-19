@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.FileRename;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The parameters sent in notifications/requests for user-initiated renames
@@ -57,13 +56,6 @@ public class RenameFilesParams {
    */
   public void setFiles(@NonNull final List<FileRename> files) {
     this.files = Preconditions.checkNotNull(files, "files");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("files", this.files);
-    return b.toString();
   }
   
   @Override

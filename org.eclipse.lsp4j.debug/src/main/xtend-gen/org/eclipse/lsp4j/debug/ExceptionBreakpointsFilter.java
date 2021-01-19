@@ -15,7 +15,6 @@ import com.google.gson.annotations.SerializedName;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * An ExceptionBreakpointsFilter is shown in the UI as an option for configuring how exceptions are dealt with.
@@ -91,15 +90,6 @@ public class ExceptionBreakpointsFilter {
    */
   public void setDefault_(final Boolean default_) {
     this.default_ = default_;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("filter", this.filter);
-    b.add("label", this.label);
-    b.add("default_", this.default_);
-    return b.toString();
   }
   
   @Override

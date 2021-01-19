@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import java.util.List;
 import org.eclipse.lsp4j.TextDocumentRegistrationOptions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class CompletionRegistrationOptions extends TextDocumentRegistrationOptions {
@@ -85,15 +84,6 @@ public class CompletionRegistrationOptions extends TextDocumentRegistrationOptio
    */
   public void setResolveProvider(final Boolean resolveProvider) {
     this.resolveProvider = resolveProvider;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("triggerCharacters", this.triggerCharacters);
-    b.add("resolveProvider", this.resolveProvider);
-    b.add("documentSelector", getDocumentSelector());
-    return b.toString();
   }
   
   @Override

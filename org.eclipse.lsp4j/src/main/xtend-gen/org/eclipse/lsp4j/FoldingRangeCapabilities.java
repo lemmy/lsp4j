@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.DynamicRegistrationCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to `textDocument/foldingRange` requests.
@@ -66,15 +65,6 @@ public class FoldingRangeCapabilities extends DynamicRegistrationCapabilities {
    */
   public void setLineFoldingOnly(final Boolean lineFoldingOnly) {
     this.lineFoldingOnly = lineFoldingOnly;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("rangeLimit", this.rangeLimit);
-    b.add("lineFoldingOnly", this.lineFoldingOnly);
-    b.add("dynamicRegistration", getDynamicRegistration());
-    return b.toString();
   }
   
   @Override

@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Marks that the code action cannot currently be applied.
@@ -68,13 +67,6 @@ public class CodeActionDisabled {
    */
   public void setReason(@NonNull final String reason) {
     this.reason = Preconditions.checkNotNull(reason, "reason");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("reason", this.reason);
-    return b.toString();
   }
   
   @Override

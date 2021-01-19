@@ -19,7 +19,6 @@ import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The document range formatting request is sent from the client to the server to format a given range in a document.
@@ -140,16 +139,6 @@ public class DocumentRangeFormattingParams implements WorkDoneProgressParams {
    */
   public void setRange(@NonNull final Range range) {
     this.range = Preconditions.checkNotNull(range, "range");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("workDoneToken", this.workDoneToken);
-    b.add("textDocument", this.textDocument);
-    b.add("options", this.options);
-    b.add("range", this.range);
-    return b.toString();
   }
   
   @Override

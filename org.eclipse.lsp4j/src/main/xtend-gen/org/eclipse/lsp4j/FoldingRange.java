@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Represents a folding range.
@@ -137,17 +136,6 @@ public class FoldingRange {
    */
   public void setKind(final String kind) {
     this.kind = kind;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("startLine", this.startLine);
-    b.add("endLine", this.endLine);
-    b.add("startCharacter", this.startCharacter);
-    b.add("endCharacter", this.endCharacter);
-    b.add("kind", this.kind);
-    return b.toString();
   }
   
   @Override

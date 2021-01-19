@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j.debug;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The event indicates that the debuggee has exited and returns its exit code.
@@ -37,13 +36,6 @@ public class ExitedEventArguments {
    */
   public void setExitCode(final int exitCode) {
     this.exitCode = exitCode;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("exitCode", this.exitCode);
-    return b.toString();
   }
   
   @Override

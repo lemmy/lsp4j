@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.debug.Source;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'gotoTargets' request.
@@ -88,15 +87,6 @@ public class GotoTargetsArguments {
    */
   public void setColumn(final Integer column) {
     this.column = column;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("source", this.source);
-    b.add("line", this.line);
-    b.add("column", this.column);
-    return b.toString();
   }
   
   @Override

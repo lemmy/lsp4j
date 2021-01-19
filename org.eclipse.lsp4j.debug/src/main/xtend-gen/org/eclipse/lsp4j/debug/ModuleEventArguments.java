@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.debug.ModuleEventArgumentsReason;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The event indicates that some information about a module has changed.
@@ -64,14 +63,6 @@ public class ModuleEventArguments {
    */
   public void setModule(@NonNull final org.eclipse.lsp4j.debug.Module module) {
     this.module = Preconditions.checkNotNull(module, "module");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("reason", this.reason);
-    b.add("module", this.module);
-    return b.toString();
   }
   
   @Override

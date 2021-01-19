@@ -18,7 +18,6 @@ import org.eclipse.lsp4j.WorkDoneProgressAndPartialResultParams;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The code action request is sent from the client to the server to compute commands for a given text document and range.
@@ -99,17 +98,6 @@ public class CodeActionParams extends WorkDoneProgressAndPartialResultParams {
    */
   public void setContext(@NonNull final CodeActionContext context) {
     this.context = Preconditions.checkNotNull(context, "context");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("textDocument", this.textDocument);
-    b.add("range", this.range);
-    b.add("context", this.context);
-    b.add("workDoneToken", getWorkDoneToken());
-    b.add("partialResultToken", getPartialResultToken());
-    return b.toString();
   }
   
   @Override

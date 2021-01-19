@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.CodeActionLiteralSupportCapabilities;
 import org.eclipse.lsp4j.CodeActionResolveSupportCapabilities;
 import org.eclipse.lsp4j.DynamicRegistrationCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Capabilities specific to the `textDocument/codeAction`
@@ -211,19 +210,6 @@ public class CodeActionCapabilities extends DynamicRegistrationCapabilities {
    */
   public void setHonorsChangeAnnotations(final Boolean honorsChangeAnnotations) {
     this.honorsChangeAnnotations = honorsChangeAnnotations;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("codeActionLiteralSupport", this.codeActionLiteralSupport);
-    b.add("isPreferredSupport", this.isPreferredSupport);
-    b.add("disabledSupport", this.disabledSupport);
-    b.add("dataSupport", this.dataSupport);
-    b.add("resolveSupport", this.resolveSupport);
-    b.add("honorsChangeAnnotations", this.honorsChangeAnnotations);
-    b.add("dynamicRegistration", getDynamicRegistration());
-    return b.toString();
   }
   
   @Override

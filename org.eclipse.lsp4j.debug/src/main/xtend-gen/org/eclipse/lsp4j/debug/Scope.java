@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.debug.Source;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A Scope is a named container for variables. Optionally a scope can map to a source or a range within a source.
@@ -317,23 +316,6 @@ public class Scope {
    */
   public void setEndColumn(final Integer endColumn) {
     this.endColumn = endColumn;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("name", this.name);
-    b.add("presentationHint", this.presentationHint);
-    b.add("variablesReference", this.variablesReference);
-    b.add("namedVariables", this.namedVariables);
-    b.add("indexedVariables", this.indexedVariables);
-    b.add("expensive", this.expensive);
-    b.add("source", this.source);
-    b.add("line", this.line);
-    b.add("column", this.column);
-    b.add("endLine", this.endLine);
-    b.add("endColumn", this.endColumn);
-    return b.toString();
   }
   
   @Override

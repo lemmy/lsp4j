@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Matching options for the file operation pattern.
@@ -46,13 +45,6 @@ public class FileOperationPatternOptions {
    */
   public void setIgnoreCase(final Boolean ignoreCase) {
     this.ignoreCase = ignoreCase;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("ignoreCase", this.ignoreCase);
-    return b.toString();
   }
   
   @Override

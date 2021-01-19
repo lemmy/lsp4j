@@ -13,7 +13,6 @@ package org.eclipse.lsp4j.debug;
 
 import org.eclipse.lsp4j.debug.SteppingGranularity;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'stepIn' request.
@@ -90,15 +89,6 @@ public class StepInArguments {
    */
   public void setGranularity(final SteppingGranularity granularity) {
     this.granularity = granularity;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("threadId", this.threadId);
-    b.add("targetId", this.targetId);
-    b.add("granularity", this.granularity);
-    return b.toString();
   }
   
   @Override

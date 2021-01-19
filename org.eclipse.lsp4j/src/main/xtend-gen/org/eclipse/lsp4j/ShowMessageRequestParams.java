@@ -15,7 +15,6 @@ import java.util.List;
 import org.eclipse.lsp4j.MessageActionItem;
 import org.eclipse.lsp4j.MessageParams;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The show message request is sent from a server to a client to ask the client to display a particular message in the
@@ -49,15 +48,6 @@ public class ShowMessageRequestParams extends MessageParams {
    */
   public void setActions(final List<MessageActionItem> actions) {
     this.actions = actions;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("actions", this.actions);
-    b.add("type", getType());
-    b.add("message", getMessage());
-    return b.toString();
   }
   
   @Override

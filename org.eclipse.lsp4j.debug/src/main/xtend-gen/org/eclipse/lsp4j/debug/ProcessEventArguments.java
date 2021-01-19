@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.debug.ProcessEventArgumentsStartMethod;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The event indicates that the debugger has begun debugging a new process. Either one that it has launched, or
@@ -153,17 +152,6 @@ public class ProcessEventArguments {
    */
   public void setPointerSize(final Integer pointerSize) {
     this.pointerSize = pointerSize;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("name", this.name);
-    b.add("systemProcessId", this.systemProcessId);
-    b.add("isLocalProcess", this.isLocalProcess);
-    b.add("startMethod", this.startMethod);
-    b.add("pointerSize", this.pointerSize);
-    return b.toString();
   }
   
   @Override

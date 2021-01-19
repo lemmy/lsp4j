@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.debug.ColumnDescriptorType;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A ColumnDescriptor specifies what module attribute to show in a column of the ModulesView, how to format it,
@@ -146,17 +145,6 @@ public class ColumnDescriptor {
    */
   public void setWidth(final Integer width) {
     this.width = width;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("attributeName", this.attributeName);
-    b.add("label", this.label);
-    b.add("format", this.format);
-    b.add("type", this.type);
-    b.add("width", this.width);
-    return b.toString();
   }
   
   @Override

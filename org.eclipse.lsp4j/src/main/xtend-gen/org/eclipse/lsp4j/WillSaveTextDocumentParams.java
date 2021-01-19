@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.TextDocumentSaveReason;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class WillSaveTextDocumentParams {
@@ -70,14 +69,6 @@ public class WillSaveTextDocumentParams {
    */
   public void setReason(@NonNull final TextDocumentSaveReason reason) {
     this.reason = Preconditions.checkNotNull(reason, "reason");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("textDocument", this.textDocument);
-    b.add("reason", this.reason);
-    return b.toString();
   }
   
   @Override

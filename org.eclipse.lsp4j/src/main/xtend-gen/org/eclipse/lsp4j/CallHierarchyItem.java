@@ -20,7 +20,6 @@ import org.eclipse.lsp4j.jsonrpc.json.adapters.JsonElementTypeAdapter;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The result of a {@code textDocument/prepareCallHierarchy} request.
@@ -210,20 +209,6 @@ public class CallHierarchyItem {
    */
   public void setData(final Object data) {
     this.data = data;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("name", this.name);
-    b.add("detail", this.detail);
-    b.add("kind", this.kind);
-    b.add("tags", this.tags);
-    b.add("uri", this.uri);
-    b.add("range", this.range);
-    b.add("selectionRange", this.selectionRange);
-    b.add("data", this.data);
-    return b.toString();
   }
   
   @Override

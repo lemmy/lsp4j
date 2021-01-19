@@ -18,7 +18,6 @@ import org.eclipse.lsp4j.TextDocumentPositionAndWorkDoneProgressParams;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Abstract class which extends TextDocumentPosition and implements work done progress and partial result request parameter.
@@ -72,17 +71,6 @@ public abstract class TextDocumentPositionAndWorkDoneProgressAndPartialResultPar
       return;
     }
     this.partialResultToken = Either.forRight(partialResultToken);
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("partialResultToken", this.partialResultToken);
-    b.add("workDoneToken", getWorkDoneToken());
-    b.add("textDocument", getTextDocument());
-    b.add("uri", getUri());
-    b.add("position", getPosition());
-    return b.toString();
   }
   
   @Override

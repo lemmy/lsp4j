@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The show message request is sent from a server to a client to ask the client to display a particular message in the
@@ -50,13 +49,6 @@ public class MessageActionItem {
    */
   public void setTitle(@NonNull final String title) {
     this.title = Preconditions.checkNotNull(title, "title");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("title", this.title);
-    return b.toString();
   }
   
   @Override

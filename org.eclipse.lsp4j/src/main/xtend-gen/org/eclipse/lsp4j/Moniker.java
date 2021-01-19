@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Moniker definition to match LSIF 0.5 moniker definition.
@@ -124,16 +123,6 @@ public class Moniker {
    */
   public void setKind(final String kind) {
     this.kind = kind;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("scheme", this.scheme);
-    b.add("identifier", this.identifier);
-    b.add("unique", this.unique);
-    b.add("kind", this.kind);
-    return b.toString();
   }
   
   @Override

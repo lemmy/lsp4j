@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.SaveOptions;
 import org.eclipse.lsp4j.TextDocumentSyncKind;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class TextDocumentSyncOptions {
@@ -136,17 +135,6 @@ public class TextDocumentSyncOptions {
       return;
     }
     this.save = Either.forRight(save);
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("openClose", this.openClose);
-    b.add("change", this.change);
-    b.add("willSave", this.willSave);
-    b.add("willSaveWaitUntil", this.willSaveWaitUntil);
-    b.add("save", this.save);
-    return b.toString();
   }
   
   @Override

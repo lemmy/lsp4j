@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Represents information on a file/folder rename.
@@ -73,14 +72,6 @@ public class FileRename {
    */
   public void setNewUri(@NonNull final String newUri) {
     this.newUri = Preconditions.checkNotNull(newUri, "newUri");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("oldUri", this.oldUri);
-    b.add("newUri", this.newUri);
-    return b.toString();
   }
   
   @Override

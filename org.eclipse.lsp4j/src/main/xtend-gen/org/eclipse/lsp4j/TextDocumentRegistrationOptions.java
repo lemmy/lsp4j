@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import java.util.List;
 import org.eclipse.lsp4j.DocumentFilter;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Since most of the registration options require to specify a document selector there is
@@ -50,13 +49,6 @@ public class TextDocumentRegistrationOptions {
    */
   public void setDocumentSelector(final List<DocumentFilter> documentSelector) {
     this.documentSelector = documentSelector;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("documentSelector", this.documentSelector);
-    return b.toString();
   }
   
   @Override

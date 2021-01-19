@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.FileEvent;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The watched files notification is sent from the client to the server when the client detects changes
@@ -53,13 +52,6 @@ public class DidChangeWatchedFilesParams {
    */
   public void setChanges(@NonNull final List<FileEvent> changes) {
     this.changes = Preconditions.checkNotNull(changes, "changes");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("changes", this.changes);
-    return b.toString();
   }
   
   @Override

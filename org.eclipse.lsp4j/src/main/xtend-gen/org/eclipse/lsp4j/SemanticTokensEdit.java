@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import java.util.List;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Since 3.16.0
@@ -84,15 +83,6 @@ public class SemanticTokensEdit {
    */
   public void setData(final List<Integer> data) {
     this.data = data;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("start", this.start);
-    b.add("deleteCount", this.deleteCount);
-    b.add("data", this.data);
-    return b.toString();
   }
   
   @Override

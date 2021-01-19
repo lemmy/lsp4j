@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.TextDocumentPositionAndWorkDoneProgressParams;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The parameter of a `textDocument/prepareCallHierarchy` request.
@@ -22,16 +21,6 @@ import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
  */
 @SuppressWarnings("all")
 public class CallHierarchyPrepareParams extends TextDocumentPositionAndWorkDoneProgressParams {
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("workDoneToken", getWorkDoneToken());
-    b.add("textDocument", getTextDocument());
-    b.add("uri", getUri());
-    b.add("position", getPosition());
-    return b.toString();
-  }
-  
   @Override
   @Pure
   public boolean equals(final Object obj) {

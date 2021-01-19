@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.TextDocumentIdentifier;
 import org.eclipse.lsp4j.TextDocumentPositionParams;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The prepare rename request is sent from the client to the server to setup and test the validity of a
@@ -29,15 +28,6 @@ public class PrepareRenameParams extends TextDocumentPositionParams {
   
   public PrepareRenameParams(@NonNull final TextDocumentIdentifier textDocument, @NonNull final Position position) {
     super(textDocument, position);
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("textDocument", getTextDocument());
-    b.add("uri", getUri());
-    b.add("position", getPosition());
-    return b.toString();
   }
   
   @Override

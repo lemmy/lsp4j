@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.debug.ChecksumAlgorithm;
 import org.eclipse.lsp4j.debug.ColumnDescriptor;
 import org.eclipse.lsp4j.debug.ExceptionBreakpointsFilter;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Information about the capabilities of a debug adapter.
@@ -943,47 +942,6 @@ public class Capabilities {
    */
   public void setSupportsInstructionBreakpoints(final Boolean supportsInstructionBreakpoints) {
     this.supportsInstructionBreakpoints = supportsInstructionBreakpoints;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("supportsConfigurationDoneRequest", this.supportsConfigurationDoneRequest);
-    b.add("supportsFunctionBreakpoints", this.supportsFunctionBreakpoints);
-    b.add("supportsConditionalBreakpoints", this.supportsConditionalBreakpoints);
-    b.add("supportsHitConditionalBreakpoints", this.supportsHitConditionalBreakpoints);
-    b.add("supportsEvaluateForHovers", this.supportsEvaluateForHovers);
-    b.add("exceptionBreakpointFilters", this.exceptionBreakpointFilters);
-    b.add("supportsStepBack", this.supportsStepBack);
-    b.add("supportsSetVariable", this.supportsSetVariable);
-    b.add("supportsRestartFrame", this.supportsRestartFrame);
-    b.add("supportsGotoTargetsRequest", this.supportsGotoTargetsRequest);
-    b.add("supportsStepInTargetsRequest", this.supportsStepInTargetsRequest);
-    b.add("supportsCompletionsRequest", this.supportsCompletionsRequest);
-    b.add("completionTriggerCharacters", this.completionTriggerCharacters);
-    b.add("supportsModulesRequest", this.supportsModulesRequest);
-    b.add("additionalModuleColumns", this.additionalModuleColumns);
-    b.add("supportedChecksumAlgorithms", this.supportedChecksumAlgorithms);
-    b.add("supportsRestartRequest", this.supportsRestartRequest);
-    b.add("supportsExceptionOptions", this.supportsExceptionOptions);
-    b.add("supportsValueFormattingOptions", this.supportsValueFormattingOptions);
-    b.add("supportsExceptionInfoRequest", this.supportsExceptionInfoRequest);
-    b.add("supportTerminateDebuggee", this.supportTerminateDebuggee);
-    b.add("supportsDelayedStackTraceLoading", this.supportsDelayedStackTraceLoading);
-    b.add("supportsLoadedSourcesRequest", this.supportsLoadedSourcesRequest);
-    b.add("supportsLogPoints", this.supportsLogPoints);
-    b.add("supportsTerminateThreadsRequest", this.supportsTerminateThreadsRequest);
-    b.add("supportsSetExpression", this.supportsSetExpression);
-    b.add("supportsTerminateRequest", this.supportsTerminateRequest);
-    b.add("supportsDataBreakpoints", this.supportsDataBreakpoints);
-    b.add("supportsReadMemoryRequest", this.supportsReadMemoryRequest);
-    b.add("supportsDisassembleRequest", this.supportsDisassembleRequest);
-    b.add("supportsCancelRequest", this.supportsCancelRequest);
-    b.add("supportsBreakpointLocationsRequest", this.supportsBreakpointLocationsRequest);
-    b.add("supportsClipboardContext", this.supportsClipboardContext);
-    b.add("supportsSteppingGranularity", this.supportsSteppingGranularity);
-    b.add("supportsInstructionBreakpoints", this.supportsInstructionBreakpoints);
-    return b.toString();
   }
   
   @Override

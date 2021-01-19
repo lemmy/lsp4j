@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.ResourceOperationKind;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Rename file operation
@@ -101,17 +100,6 @@ public class RenameFile extends ResourceOperation {
    */
   public void setOptions(final RenameFileOptions options) {
     this.options = options;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("oldUri", this.oldUri);
-    b.add("newUri", this.newUri);
-    b.add("options", this.options);
-    b.add("kind", getKind());
-    b.add("annotationId", getAnnotationId());
-    return b.toString();
   }
   
   @Override

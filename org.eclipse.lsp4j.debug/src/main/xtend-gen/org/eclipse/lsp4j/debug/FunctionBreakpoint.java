@@ -14,7 +14,6 @@ package org.eclipse.lsp4j.debug;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Properties of a breakpoint passed to the setFunctionBreakpoints request.
@@ -111,15 +110,6 @@ public class FunctionBreakpoint {
    */
   public void setHitCondition(final String hitCondition) {
     this.hitCondition = hitCondition;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("name", this.name);
-    b.add("condition", this.condition);
-    b.add("hitCondition", this.hitCondition);
-    return b.toString();
   }
   
   @Override

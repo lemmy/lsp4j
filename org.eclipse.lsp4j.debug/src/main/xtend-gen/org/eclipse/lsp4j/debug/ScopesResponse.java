@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.debug.Scope;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Response to 'scopes' request.
@@ -43,13 +42,6 @@ public class ScopesResponse {
    */
   public void setScopes(@NonNull final Scope[] scopes) {
     this.scopes = Preconditions.checkNotNull(scopes, "scopes");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("scopes", this.scopes);
-    return b.toString();
   }
   
   @Override

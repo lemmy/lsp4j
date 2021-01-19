@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.Range;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A special text edit to provide an insert and a replace operation.
@@ -97,15 +96,6 @@ public class InsertReplaceEdit {
    */
   public void setReplace(@NonNull final Range replace) {
     this.replace = Preconditions.checkNotNull(replace, "replace");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("newText", this.newText);
-    b.add("insert", this.insert);
-    b.add("replace", this.replace);
-    return b.toString();
   }
   
   @Override

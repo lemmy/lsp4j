@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.TextDocumentSyncKind;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Describe options to be used when registered for text document change events.
@@ -53,14 +52,6 @@ public class TextDocumentChangeRegistrationOptions extends TextDocumentRegistrat
    */
   public void setSyncKind(@NonNull final TextDocumentSyncKind syncKind) {
     this.syncKind = Preconditions.checkNotNull(syncKind, "syncKind");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("syncKind", this.syncKind);
-    b.add("documentSelector", getDocumentSelector());
-    return b.toString();
   }
   
   @Override

@@ -18,7 +18,6 @@ import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The document formatting request is sent from the server to the client to format a whole document.
@@ -111,15 +110,6 @@ public class DocumentFormattingParams implements WorkDoneProgressParams {
    */
   public void setOptions(@NonNull final FormattingOptions options) {
     this.options = Preconditions.checkNotNull(options, "options");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("workDoneToken", this.workDoneToken);
-    b.add("textDocument", this.textDocument);
-    b.add("options", this.options);
-    return b.toString();
   }
   
   @Override

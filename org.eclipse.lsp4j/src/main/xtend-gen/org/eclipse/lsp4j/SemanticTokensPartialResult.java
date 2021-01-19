@@ -15,7 +15,6 @@ import java.util.List;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Since 3.16.0
@@ -37,13 +36,6 @@ public class SemanticTokensPartialResult {
   
   public void setData(@NonNull final List<Integer> data) {
     this.data = Preconditions.checkNotNull(data, "data");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("data", this.data);
-    return b.toString();
   }
   
   @Override

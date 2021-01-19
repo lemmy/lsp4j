@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Whether the client in general supports change annotations on text edits,
@@ -53,13 +52,6 @@ public class WorkspaceEditChangeAnnotationSupportCapabilities {
    */
   public void setGroupsOnLabel(final Boolean groupsOnLabel) {
     this.groupsOnLabel = groupsOnLabel;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("groupsOnLabel", this.groupsOnLabel);
-    return b.toString();
   }
   
   @Override

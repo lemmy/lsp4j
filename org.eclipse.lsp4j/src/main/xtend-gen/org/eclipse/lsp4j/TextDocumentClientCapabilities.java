@@ -40,7 +40,6 @@ import org.eclipse.lsp4j.SynchronizationCapabilities;
 import org.eclipse.lsp4j.TypeDefinitionCapabilities;
 import org.eclipse.lsp4j.TypeHierarchyCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Text document specific client capabilities.
@@ -646,39 +645,6 @@ public class TextDocumentClientCapabilities {
    */
   public void setLinkedEditingRange(final LinkedEditingRangeCapabilities linkedEditingRange) {
     this.linkedEditingRange = linkedEditingRange;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("synchronization", this.synchronization);
-    b.add("completion", this.completion);
-    b.add("hover", this.hover);
-    b.add("signatureHelp", this.signatureHelp);
-    b.add("references", this.references);
-    b.add("documentHighlight", this.documentHighlight);
-    b.add("documentSymbol", this.documentSymbol);
-    b.add("formatting", this.formatting);
-    b.add("rangeFormatting", this.rangeFormatting);
-    b.add("onTypeFormatting", this.onTypeFormatting);
-    b.add("declaration", this.declaration);
-    b.add("definition", this.definition);
-    b.add("typeDefinition", this.typeDefinition);
-    b.add("implementation", this.implementation);
-    b.add("codeAction", this.codeAction);
-    b.add("codeLens", this.codeLens);
-    b.add("documentLink", this.documentLink);
-    b.add("colorProvider", this.colorProvider);
-    b.add("rename", this.rename);
-    b.add("publishDiagnostics", this.publishDiagnostics);
-    b.add("foldingRange", this.foldingRange);
-    b.add("typeHierarchyCapabilities", this.typeHierarchyCapabilities);
-    b.add("callHierarchy", this.callHierarchy);
-    b.add("selectionRange", this.selectionRange);
-    b.add("semanticTokens", this.semanticTokens);
-    b.add("moniker", this.moniker);
-    b.add("linkedEditingRange", this.linkedEditingRange);
-    return b.toString();
   }
   
   @Override

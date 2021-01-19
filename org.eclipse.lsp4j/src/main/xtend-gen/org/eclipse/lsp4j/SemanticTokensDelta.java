@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.SemanticTokensEdit;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Since 3.16.0
@@ -63,14 +62,6 @@ public class SemanticTokensDelta {
    */
   public void setEdits(@NonNull final List<SemanticTokensEdit> edits) {
     this.edits = Preconditions.checkNotNull(edits, "edits");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("resultId", this.resultId);
-    b.add("edits", this.edits);
-    return b.toString();
   }
   
   @Override

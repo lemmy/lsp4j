@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.TypeHierarchyItem;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Request to resolve an unresolved {@link TypeHierarchyItem type hierarchy item} which is indicated if the
@@ -98,15 +97,6 @@ public class ResolveTypeHierarchyItemParams {
    */
   public void setDirection(@NonNull final TypeHierarchyDirection direction) {
     this.direction = Preconditions.checkNotNull(direction, "direction");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("item", this.item);
-    b.add("resolve", this.resolve);
-    b.add("direction", this.direction);
-    return b.toString();
   }
   
   @Override

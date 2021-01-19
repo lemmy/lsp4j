@@ -15,7 +15,6 @@ import java.util.Map;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A structured message object. Used to return errors from requests.
@@ -201,19 +200,6 @@ public class Message {
    */
   public void setUrlLabel(final String urlLabel) {
     this.urlLabel = urlLabel;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("id", this.id);
-    b.add("format", this.format);
-    b.add("variables", this.variables);
-    b.add("sendTelemetry", this.sendTelemetry);
-    b.add("showUser", this.showUser);
-    b.add("url", this.url);
-    b.add("urlLabel", this.urlLabel);
-    return b.toString();
   }
   
   @Override

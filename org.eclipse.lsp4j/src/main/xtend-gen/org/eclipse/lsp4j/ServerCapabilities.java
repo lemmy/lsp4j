@@ -32,7 +32,6 @@ import org.eclipse.lsp4j.WorkspaceServerCapabilities;
 import org.eclipse.lsp4j.jsonrpc.json.adapters.JsonElementTypeAdapter;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The server can signal these capabilities
@@ -937,42 +936,6 @@ public class ServerCapabilities {
    */
   public void setExperimental(final Object experimental) {
     this.experimental = experimental;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("textDocumentSync", this.textDocumentSync);
-    b.add("hoverProvider", this.hoverProvider);
-    b.add("completionProvider", this.completionProvider);
-    b.add("signatureHelpProvider", this.signatureHelpProvider);
-    b.add("definitionProvider", this.definitionProvider);
-    b.add("typeDefinitionProvider", this.typeDefinitionProvider);
-    b.add("implementationProvider", this.implementationProvider);
-    b.add("referencesProvider", this.referencesProvider);
-    b.add("documentHighlightProvider", this.documentHighlightProvider);
-    b.add("documentSymbolProvider", this.documentSymbolProvider);
-    b.add("workspaceSymbolProvider", this.workspaceSymbolProvider);
-    b.add("codeActionProvider", this.codeActionProvider);
-    b.add("codeLensProvider", this.codeLensProvider);
-    b.add("documentFormattingProvider", this.documentFormattingProvider);
-    b.add("documentRangeFormattingProvider", this.documentRangeFormattingProvider);
-    b.add("documentOnTypeFormattingProvider", this.documentOnTypeFormattingProvider);
-    b.add("renameProvider", this.renameProvider);
-    b.add("documentLinkProvider", this.documentLinkProvider);
-    b.add("colorProvider", this.colorProvider);
-    b.add("foldingRangeProvider", this.foldingRangeProvider);
-    b.add("declarationProvider", this.declarationProvider);
-    b.add("executeCommandProvider", this.executeCommandProvider);
-    b.add("workspace", this.workspace);
-    b.add("typeHierarchyProvider", this.typeHierarchyProvider);
-    b.add("callHierarchyProvider", this.callHierarchyProvider);
-    b.add("selectionRangeProvider", this.selectionRangeProvider);
-    b.add("linkedEditingRangeProvider", this.linkedEditingRangeProvider);
-    b.add("semanticTokensProvider", this.semanticTokensProvider);
-    b.add("monikerProvider", this.monikerProvider);
-    b.add("experimental", this.experimental);
-    return b.toString();
   }
   
   @Override

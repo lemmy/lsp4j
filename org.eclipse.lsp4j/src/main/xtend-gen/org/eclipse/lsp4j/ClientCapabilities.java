@@ -18,7 +18,6 @@ import org.eclipse.lsp4j.WindowClientCapabilities;
 import org.eclipse.lsp4j.WorkspaceClientCapabilities;
 import org.eclipse.lsp4j.jsonrpc.json.adapters.JsonElementTypeAdapter;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * `ClientCapabilities` now define capabilities for dynamic registration, workspace and text document features the client supports.
@@ -156,17 +155,6 @@ public class ClientCapabilities {
    */
   public void setExperimental(final Object experimental) {
     this.experimental = experimental;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("workspace", this.workspace);
-    b.add("textDocument", this.textDocument);
-    b.add("window", this.window);
-    b.add("general", this.general);
-    b.add("experimental", this.experimental);
-    return b.toString();
   }
   
   @Override

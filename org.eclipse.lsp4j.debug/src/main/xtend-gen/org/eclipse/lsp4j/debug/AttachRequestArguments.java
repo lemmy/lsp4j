@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j.debug;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'attach' request. Additional attributes are implementation specific.
@@ -55,13 +54,6 @@ public class AttachRequestArguments {
    */
   public void set__restart(final Object __restart) {
     this.__restart = __restart;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("__restart", this.__restart);
-    return b.toString();
   }
   
   @Override

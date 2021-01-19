@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.debug.ColumnDescriptor;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The ModulesViewDescriptor is the container for all declarative configuration options of a ModuleView.
@@ -36,13 +35,6 @@ public class ModulesViewDescriptor {
   
   public void setColumns(@NonNull final ColumnDescriptor[] columns) {
     this.columns = Preconditions.checkNotNull(columns, "columns");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("columns", this.columns);
-    return b.toString();
   }
   
   @Override

@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.FileOperationPattern;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A filter to describe in which file operation requests or notifications
@@ -77,14 +76,6 @@ public class FileOperationFilter {
    */
   public void setScheme(final String scheme) {
     this.scheme = scheme;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("pattern", this.pattern);
-    b.add("scheme", this.scheme);
-    return b.toString();
   }
   
   @Override

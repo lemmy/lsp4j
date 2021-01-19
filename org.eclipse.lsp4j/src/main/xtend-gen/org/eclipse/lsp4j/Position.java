@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Position in a text document expressed as zero-based line and character offset.
@@ -65,14 +64,6 @@ public class Position {
    */
   public void setCharacter(final int character) {
     this.character = character;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("line", this.line);
-    b.add("character", this.character);
-    return b.toString();
   }
   
   @Override

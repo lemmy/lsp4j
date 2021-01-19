@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.SemanticTokensClientCapabilitiesRequests;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Since 3.16.0
@@ -187,19 +186,6 @@ public class SemanticTokensCapabilities extends DynamicRegistrationCapabilities 
    */
   public void setMultilineTokenSupport(final Boolean multilineTokenSupport) {
     this.multilineTokenSupport = multilineTokenSupport;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("requests", this.requests);
-    b.add("tokenTypes", this.tokenTypes);
-    b.add("tokenModifiers", this.tokenModifiers);
-    b.add("formats", this.formats);
-    b.add("overlappingTokenSupport", this.overlappingTokenSupport);
-    b.add("multilineTokenSupport", this.multilineTokenSupport);
-    b.add("dynamicRegistration", getDynamicRegistration());
-    return b.toString();
   }
   
   @Override

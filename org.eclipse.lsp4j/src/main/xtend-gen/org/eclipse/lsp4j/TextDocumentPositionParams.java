@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.TextDocumentIdentifier;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A parameter literal used in requests to pass a text document and a position inside that document.
@@ -103,15 +102,6 @@ public class TextDocumentPositionParams {
    */
   public void setPosition(@NonNull final Position position) {
     this.position = Preconditions.checkNotNull(position, "position");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("textDocument", this.textDocument);
-    b.add("uri", this.uri);
-    b.add("position", this.position);
-    return b.toString();
   }
   
   @Override

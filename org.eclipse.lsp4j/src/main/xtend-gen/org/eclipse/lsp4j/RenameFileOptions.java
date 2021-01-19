@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Rename file options
@@ -65,14 +64,6 @@ public class RenameFileOptions {
    */
   public void setIgnoreIfExists(final Boolean ignoreIfExists) {
     this.ignoreIfExists = ignoreIfExists;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("overwrite", this.overwrite);
-    b.add("ignoreIfExists", this.ignoreIfExists);
-    return b.toString();
   }
   
   @Override

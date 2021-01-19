@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import java.util.List;
 import org.eclipse.lsp4j.AbstractWorkDoneProgressOptions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Code Action options.
@@ -84,15 +83,6 @@ public class CodeActionOptions extends AbstractWorkDoneProgressOptions {
    */
   public void setResolveProvider(final Boolean resolveProvider) {
     this.resolveProvider = resolveProvider;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("codeActionKinds", this.codeActionKinds);
-    b.add("resolveProvider", this.resolveProvider);
-    b.add("workDoneProgress", getWorkDoneProgress());
-    return b.toString();
   }
   
   @Override

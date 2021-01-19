@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.Range;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Params to show a document.
@@ -138,16 +137,6 @@ public class ShowDocumentParams {
    */
   public void setSelection(final Range selection) {
     this.selection = selection;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("uri", this.uri);
-    b.add("external", this.external);
-    b.add("takeFocus", this.takeFocus);
-    b.add("selection", this.selection);
-    return b.toString();
   }
   
   @Override

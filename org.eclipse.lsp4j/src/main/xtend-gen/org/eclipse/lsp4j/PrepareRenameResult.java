@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.Range;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * One of the result types of the `textDocument/prepareRename` request.
@@ -73,14 +72,6 @@ public class PrepareRenameResult {
    */
   public void setPlaceholder(@NonNull final String placeholder) {
     this.placeholder = Preconditions.checkNotNull(placeholder, "placeholder");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("range", this.range);
-    b.add("placeholder", this.placeholder);
-    return b.toString();
   }
   
   @Override

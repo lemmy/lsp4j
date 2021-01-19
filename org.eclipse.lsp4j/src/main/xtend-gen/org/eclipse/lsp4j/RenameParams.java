@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.TextDocumentPositionAndWorkDoneProgressParams;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The rename request is sent from the client to the server to do a workspace wide rename of a symbol.
@@ -55,17 +54,6 @@ public class RenameParams extends TextDocumentPositionAndWorkDoneProgressParams 
    */
   public void setNewName(@NonNull final String newName) {
     this.newName = Preconditions.checkNotNull(newName, "newName");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("newName", this.newName);
-    b.add("workDoneToken", getWorkDoneToken());
-    b.add("textDocument", getTextDocument());
-    b.add("uri", getUri());
-    b.add("position", getPosition());
-    return b.toString();
   }
   
   @Override

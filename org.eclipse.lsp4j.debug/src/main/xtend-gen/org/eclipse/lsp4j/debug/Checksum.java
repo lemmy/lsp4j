@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.debug.ChecksumAlgorithm;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The checksum of an item calculated by the specified algorithm.
@@ -64,14 +63,6 @@ public class Checksum {
    */
   public void setChecksum(@NonNull final String checksum) {
     this.checksum = Preconditions.checkNotNull(checksum, "checksum");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("algorithm", this.algorithm);
-    b.add("checksum", this.checksum);
-    return b.toString();
   }
   
   @Override

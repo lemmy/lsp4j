@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.TextDocumentIdentifier;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The document close notification is sent from the client to the server when the document got closed in the client.
@@ -51,13 +50,6 @@ public class DidCloseTextDocumentParams {
    */
   public void setTextDocument(@NonNull final TextDocumentIdentifier textDocument) {
     this.textDocument = Preconditions.checkNotNull(textDocument, "textDocument");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("textDocument", this.textDocument);
-    return b.toString();
   }
   
   @Override

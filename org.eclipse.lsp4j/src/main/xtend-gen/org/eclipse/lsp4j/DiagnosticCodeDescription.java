@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Structure to capture a description for an error code.
@@ -50,13 +49,6 @@ public class DiagnosticCodeDescription {
    */
   public void setHref(@NonNull final String href) {
     this.href = Preconditions.checkNotNull(href, "href");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("href", this.href);
-    return b.toString();
   }
   
   @Override

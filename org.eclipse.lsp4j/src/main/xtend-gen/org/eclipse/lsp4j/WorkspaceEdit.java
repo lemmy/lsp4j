@@ -25,7 +25,6 @@ import org.eclipse.lsp4j.adapters.DocumentChangeListAdapter;
 import org.eclipse.lsp4j.adapters.ResourceChangeListAdapter;
 import org.eclipse.lsp4j.jsonrpc.messages.Either;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A workspace edit represents changes to many resources managed in the workspace.
@@ -171,16 +170,6 @@ public class WorkspaceEdit {
    */
   public void setChangeAnnotations(final Map<String, ChangeAnnotation> changeAnnotations) {
     this.changeAnnotations = changeAnnotations;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("changes", this.changes);
-    b.add("documentChanges", this.documentChanges);
-    b.add("resourceChanges", this.resourceChanges);
-    b.add("changeAnnotations", this.changeAnnotations);
-    return b.toString();
   }
   
   @Override

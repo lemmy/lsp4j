@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.WindowShowMessageRequestActionItemCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Show message request client capabilities
@@ -43,13 +42,6 @@ public class WindowShowMessageRequestCapabilities {
    */
   public void setMessageActionItem(final WindowShowMessageRequestActionItemCapabilities messageActionItem) {
     this.messageActionItem = messageActionItem;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("messageActionItem", this.messageActionItem);
-    return b.toString();
   }
   
   @Override

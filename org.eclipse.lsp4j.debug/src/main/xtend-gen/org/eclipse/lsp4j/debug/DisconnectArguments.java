@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j.debug;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'disconnect' request.
@@ -81,14 +80,6 @@ public class DisconnectArguments {
    */
   public void setTerminateDebuggee(final Boolean terminateDebuggee) {
     this.terminateDebuggee = terminateDebuggee;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("restart", this.restart);
-    b.add("terminateDebuggee", this.terminateDebuggee);
-    return b.toString();
   }
   
   @Override

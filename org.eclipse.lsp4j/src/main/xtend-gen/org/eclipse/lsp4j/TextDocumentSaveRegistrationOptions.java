@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.TextDocumentRegistrationOptions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class TextDocumentSaveRegistrationOptions extends TextDocumentRegistrationOptions {
@@ -42,14 +41,6 @@ public class TextDocumentSaveRegistrationOptions extends TextDocumentRegistratio
    */
   public void setIncludeText(final Boolean includeText) {
     this.includeText = includeText;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("includeText", this.includeText);
-    b.add("documentSelector", getDocumentSelector());
-    return b.toString();
   }
   
   @Override

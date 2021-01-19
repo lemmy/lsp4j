@@ -14,7 +14,6 @@ package org.eclipse.lsp4j;
 import java.util.List;
 import org.eclipse.lsp4j.AbstractWorkDoneProgressOptions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Completion options.
@@ -67,15 +66,6 @@ public class CompletionOptions extends AbstractWorkDoneProgressOptions {
    */
   public void setTriggerCharacters(final List<String> triggerCharacters) {
     this.triggerCharacters = triggerCharacters;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("resolveProvider", this.resolveProvider);
-    b.add("triggerCharacters", this.triggerCharacters);
-    b.add("workDoneProgress", getWorkDoneProgress());
-    return b.toString();
   }
   
   @Override

@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j.debug;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'terminate' request.
@@ -43,13 +42,6 @@ public class TerminateArguments {
    */
   public void setRestart(final Boolean restart) {
     this.restart = restart;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("restart", this.restart);
-    return b.toString();
   }
   
   @Override

@@ -18,7 +18,6 @@ import org.eclipse.lsp4j.TextDocumentPositionAndWorkDoneProgressAndPartialResult
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The references request is sent from the client to the server to resolve project-wide references for the symbol
@@ -50,18 +49,6 @@ public class ReferenceParams extends TextDocumentPositionAndWorkDoneProgressAndP
   
   public void setContext(@NonNull final ReferenceContext context) {
     this.context = Preconditions.checkNotNull(context, "context");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("context", this.context);
-    b.add("partialResultToken", getPartialResultToken());
-    b.add("workDoneToken", getWorkDoneToken());
-    b.add("textDocument", getTextDocument());
-    b.add("uri", getUri());
-    b.add("position", getPosition());
-    return b.toString();
   }
   
   @Override

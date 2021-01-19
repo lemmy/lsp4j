@@ -14,7 +14,6 @@ package org.eclipse.lsp4j.debug;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The event signals the end of the progress reporting with an optional final message.
@@ -70,14 +69,6 @@ public class ProgressEndEventArguments {
    */
   public void setMessage(final String message) {
     this.message = message;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("progressId", this.progressId);
-    b.add("message", this.message);
-    return b.toString();
   }
   
   @Override

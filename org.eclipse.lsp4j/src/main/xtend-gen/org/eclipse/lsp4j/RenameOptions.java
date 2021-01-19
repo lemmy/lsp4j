@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.AbstractTextDocumentRegistrationAndWorkDoneProgressOptions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Rename options
@@ -82,16 +81,6 @@ public class RenameOptions extends AbstractTextDocumentRegistrationAndWorkDonePr
    */
   public void setPrepareProvider(final Boolean prepareProvider) {
     this.prepareProvider = prepareProvider;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("id", this.id);
-    b.add("prepareProvider", this.prepareProvider);
-    b.add("workDoneProgress", getWorkDoneProgress());
-    b.add("documentSelector", getDocumentSelector());
-    return b.toString();
   }
   
   @Override

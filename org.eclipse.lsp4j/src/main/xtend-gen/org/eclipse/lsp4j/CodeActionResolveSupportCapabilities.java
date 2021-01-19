@@ -16,7 +16,6 @@ import java.util.List;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Whether the client supports resolving additional code action
@@ -55,13 +54,6 @@ public class CodeActionResolveSupportCapabilities {
    */
   public void setProperties(@NonNull final List<String> properties) {
     this.properties = Preconditions.checkNotNull(properties, "properties");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("properties", this.properties);
-    return b.toString();
   }
   
   @Override

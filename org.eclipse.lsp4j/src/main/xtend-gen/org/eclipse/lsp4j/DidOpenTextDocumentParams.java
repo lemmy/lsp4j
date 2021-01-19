@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.TextDocumentItem;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The document open notification is sent from the client to the server to signal newly opened text documents.
@@ -80,14 +79,6 @@ public class DidOpenTextDocumentParams {
   @Deprecated
   public void setText(final String text) {
     this.text = text;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("textDocument", this.textDocument);
-    b.add("text", this.text);
-    return b.toString();
   }
   
   @Override

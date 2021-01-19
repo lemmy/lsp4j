@@ -15,7 +15,6 @@ import java.util.List;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Represents a reference to a command. Provides a title which will be used to represent a command in the UI and,
@@ -98,15 +97,6 @@ public class Command {
    */
   public void setArguments(final List<Object> arguments) {
     this.arguments = arguments;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("title", this.title);
-    b.add("command", this.command);
-    b.add("arguments", this.arguments);
-    return b.toString();
   }
   
   @Override

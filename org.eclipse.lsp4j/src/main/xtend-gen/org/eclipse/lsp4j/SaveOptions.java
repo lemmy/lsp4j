@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Save options.
@@ -44,13 +43,6 @@ public class SaveOptions {
    */
   public void setIncludeText(final Boolean includeText) {
     this.includeText = includeText;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("includeText", this.includeText);
-    return b.toString();
   }
   
   @Override

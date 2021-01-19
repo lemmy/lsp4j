@@ -18,7 +18,6 @@ import org.eclipse.lsp4j.SymbolTag;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Represents programming constructs like variables, classes, interfaces etc. that appear in a document. Document symbols can be
@@ -241,20 +240,6 @@ public class DocumentSymbol {
    */
   public void setChildren(final List<DocumentSymbol> children) {
     this.children = children;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("name", this.name);
-    b.add("kind", this.kind);
-    b.add("range", this.range);
-    b.add("selectionRange", this.selectionRange);
-    b.add("detail", this.detail);
-    b.add("tags", this.tags);
-    b.add("deprecated", this.deprecated);
-    b.add("children", this.children);
-    return b.toString();
   }
   
   @Override

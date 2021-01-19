@@ -13,7 +13,6 @@ package org.eclipse.lsp4j.debug;
 
 import org.eclipse.lsp4j.debug.ValueFormat;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Provides formatting information for a stack frame.
@@ -200,20 +199,6 @@ public class StackFrameFormat extends ValueFormat {
    */
   public void setIncludeAll(final Boolean includeAll) {
     this.includeAll = includeAll;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("parameters", this.parameters);
-    b.add("parameterTypes", this.parameterTypes);
-    b.add("parameterNames", this.parameterNames);
-    b.add("parameterValues", this.parameterValues);
-    b.add("line", this.line);
-    b.add("module", this.module);
-    b.add("includeAll", this.includeAll);
-    b.add("hex", getHex());
-    return b.toString();
   }
   
   @Override

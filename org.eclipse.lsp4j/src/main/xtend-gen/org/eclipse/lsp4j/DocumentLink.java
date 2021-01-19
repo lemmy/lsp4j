@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.jsonrpc.json.adapters.JsonElementTypeAdapter;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A document link is a range in a text document that links to an internal or external resource, like another
@@ -149,16 +148,6 @@ public class DocumentLink {
    */
   public void setData(final Object data) {
     this.data = data;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("range", this.range);
-    b.add("target", this.target);
-    b.add("tooltip", this.tooltip);
-    b.add("data", this.data);
-    return b.toString();
   }
   
   @Override

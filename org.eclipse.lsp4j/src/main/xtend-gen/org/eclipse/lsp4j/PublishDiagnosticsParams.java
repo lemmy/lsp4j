@@ -17,7 +17,6 @@ import org.eclipse.lsp4j.Diagnostic;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Diagnostics notification are sent from the server to the client to signal results of validation runs.
@@ -107,15 +106,6 @@ public class PublishDiagnosticsParams {
    */
   public void setVersion(final Integer version) {
     this.version = version;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("uri", this.uri);
-    b.add("diagnostics", this.diagnostics);
-    b.add("version", this.version);
-    return b.toString();
   }
   
   @Override

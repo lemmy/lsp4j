@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.Position;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * A range in a text document expressed as (zero-based) start and end positions.
@@ -72,14 +71,6 @@ public class Range {
    */
   public void setEnd(@NonNull final Position end) {
     this.end = Preconditions.checkNotNull(end, "end");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("start", this.start);
-    b.add("end", this.end);
-    return b.toString();
   }
   
   @Override

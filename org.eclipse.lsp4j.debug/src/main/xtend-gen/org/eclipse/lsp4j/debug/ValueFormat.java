@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j.debug;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Provides formatting information for a value.
@@ -43,13 +42,6 @@ public class ValueFormat {
    */
   public void setHex(final Boolean hex) {
     this.hex = hex;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("hex", this.hex);
-    return b.toString();
   }
   
   @Override

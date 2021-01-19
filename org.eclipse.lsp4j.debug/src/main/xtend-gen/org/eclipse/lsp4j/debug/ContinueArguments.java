@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j.debug;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'continue' request.
@@ -46,13 +45,6 @@ public class ContinueArguments {
    */
   public void setThreadId(final int threadId) {
     this.threadId = threadId;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("threadId", this.threadId);
-    return b.toString();
   }
   
   @Override

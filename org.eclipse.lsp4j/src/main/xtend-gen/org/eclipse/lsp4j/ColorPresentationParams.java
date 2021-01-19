@@ -18,7 +18,6 @@ import org.eclipse.lsp4j.WorkDoneProgressAndPartialResultParams;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.lsp4j.util.Preconditions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The color presentation request is sent from the client to the server to obtain a list of presentations
@@ -101,17 +100,6 @@ public class ColorPresentationParams extends WorkDoneProgressAndPartialResultPar
    */
   public void setRange(@NonNull final Range range) {
     this.range = Preconditions.checkNotNull(range, "range");
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("textDocument", this.textDocument);
-    b.add("color", this.color);
-    b.add("range", this.range);
-    b.add("workDoneToken", getWorkDoneToken());
-    b.add("partialResultToken", getPartialResultToken());
-    return b.toString();
   }
   
   @Override

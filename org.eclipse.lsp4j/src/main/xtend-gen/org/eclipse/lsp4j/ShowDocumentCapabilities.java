@@ -12,7 +12,6 @@
 package org.eclipse.lsp4j;
 
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Client capabilities for the show document request.
@@ -49,13 +48,6 @@ public class ShowDocumentCapabilities {
    */
   public void setSupport(final boolean support) {
     this.support = support;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("support", this.support);
-    return b.toString();
   }
   
   @Override

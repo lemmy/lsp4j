@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.DynamicRegistrationCapabilities;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
 public class SynchronizationCapabilities extends DynamicRegistrationCapabilities {
@@ -97,16 +96,6 @@ public class SynchronizationCapabilities extends DynamicRegistrationCapabilities
    */
   public void setDidSave(final Boolean didSave) {
     this.didSave = didSave;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("willSave", this.willSave);
-    b.add("willSaveWaitUntil", this.willSaveWaitUntil);
-    b.add("didSave", this.didSave);
-    b.add("dynamicRegistration", getDynamicRegistration());
-    return b.toString();
   }
   
   @Override

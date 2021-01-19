@@ -13,7 +13,6 @@ package org.eclipse.lsp4j.debug;
 
 import org.eclipse.lsp4j.debug.Source;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Information about a Breakpoint created in setBreakpoints, setFunctionBreakpoints, setInstructionBreakpoints, or
@@ -294,22 +293,6 @@ public class Breakpoint {
    */
   public void setOffset(final Integer offset) {
     this.offset = offset;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("id", this.id);
-    b.add("verified", this.verified);
-    b.add("message", this.message);
-    b.add("source", this.source);
-    b.add("line", this.line);
-    b.add("column", this.column);
-    b.add("endLine", this.endLine);
-    b.add("endColumn", this.endColumn);
-    b.add("instructionReference", this.instructionReference);
-    b.add("offset", this.offset);
-    return b.toString();
   }
   
   @Override

@@ -13,7 +13,6 @@ package org.eclipse.lsp4j;
 
 import org.eclipse.lsp4j.FileOperationOptions;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * The server is interested in file notifications/requests.
@@ -143,18 +142,6 @@ public class FileOperationsServerCapabilities {
    */
   public void setWillDelete(final FileOperationOptions willDelete) {
     this.willDelete = willDelete;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("didCreate", this.didCreate);
-    b.add("willCreate", this.willCreate);
-    b.add("didRename", this.didRename);
-    b.add("willRename", this.willRename);
-    b.add("didDelete", this.didDelete);
-    b.add("willDelete", this.willDelete);
-    return b.toString();
   }
   
   @Override

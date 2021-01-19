@@ -15,7 +15,6 @@ import org.eclipse.lsp4j.debug.ValueFormat;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Arguments for 'evaluate' request.
@@ -135,16 +134,6 @@ public class EvaluateArguments {
    */
   public void setFormat(final ValueFormat format) {
     this.format = format;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("expression", this.expression);
-    b.add("frameId", this.frameId);
-    b.add("context", this.context);
-    b.add("format", this.format);
-    return b.toString();
   }
   
   @Override

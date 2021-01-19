@@ -16,7 +16,6 @@ import org.eclipse.lsp4j.debug.DataBreakpointAccessType;
 import org.eclipse.lsp4j.debug.util.Preconditions;
 import org.eclipse.lsp4j.jsonrpc.validation.NonNull;
 import org.eclipse.xtext.xbase.lib.Pure;
-import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 /**
  * Response to 'dataBreakpointInfo' request.
@@ -121,16 +120,6 @@ public class DataBreakpointInfoResponse {
    */
   public void setCanPersist(final Boolean canPersist) {
     this.canPersist = canPersist;
-  }
-  
-  @Override
-  public String toString() {
-    ToStringBuilder b = new ToStringBuilder(this);
-    b.add("dataId", this.dataId);
-    b.add("description", this.description);
-    b.add("accessTypes", this.accessTypes);
-    b.add("canPersist", this.canPersist);
-    return b.toString();
   }
   
   @Override
