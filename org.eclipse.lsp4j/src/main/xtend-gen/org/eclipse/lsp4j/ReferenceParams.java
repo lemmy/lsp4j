@@ -53,7 +53,6 @@ public class ReferenceParams extends TextDocumentPositionAndWorkDoneProgressAndP
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("context", this.context);

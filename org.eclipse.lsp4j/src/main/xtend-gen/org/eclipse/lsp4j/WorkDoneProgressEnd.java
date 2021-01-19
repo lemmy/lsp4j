@@ -56,7 +56,6 @@ public class WorkDoneProgressEnd implements WorkDoneProgressNotification {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("message", this.message);

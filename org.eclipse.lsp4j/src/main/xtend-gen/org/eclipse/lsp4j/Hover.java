@@ -116,7 +116,6 @@ public class Hover {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("contents", this.contents);

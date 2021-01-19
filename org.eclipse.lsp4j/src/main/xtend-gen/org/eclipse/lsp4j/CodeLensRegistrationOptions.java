@@ -45,7 +45,6 @@ public class CodeLensRegistrationOptions extends TextDocumentRegistrationOptions
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("resolveProvider", this.resolveProvider);

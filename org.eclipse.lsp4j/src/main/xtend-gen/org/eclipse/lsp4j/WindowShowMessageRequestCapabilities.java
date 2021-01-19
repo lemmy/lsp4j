@@ -46,7 +46,6 @@ public class WindowShowMessageRequestCapabilities {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("messageActionItem", this.messageActionItem);

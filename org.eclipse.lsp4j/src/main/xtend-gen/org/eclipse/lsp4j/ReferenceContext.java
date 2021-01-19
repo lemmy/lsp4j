@@ -48,7 +48,6 @@ public class ReferenceContext {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("includeDeclaration", this.includeDeclaration);

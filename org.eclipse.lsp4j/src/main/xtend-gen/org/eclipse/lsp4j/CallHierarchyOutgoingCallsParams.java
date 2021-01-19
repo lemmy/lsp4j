@@ -46,7 +46,6 @@ public class CallHierarchyOutgoingCallsParams extends WorkDoneProgressAndPartial
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("item", this.item);

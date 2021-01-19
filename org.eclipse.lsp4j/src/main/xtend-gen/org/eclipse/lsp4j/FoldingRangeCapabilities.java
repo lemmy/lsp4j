@@ -69,7 +69,6 @@ public class FoldingRangeCapabilities extends DynamicRegistrationCapabilities {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("rangeLimit", this.rangeLimit);

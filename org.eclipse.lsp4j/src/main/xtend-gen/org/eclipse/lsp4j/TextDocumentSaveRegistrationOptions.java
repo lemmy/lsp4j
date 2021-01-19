@@ -45,7 +45,6 @@ public class TextDocumentSaveRegistrationOptions extends TextDocumentRegistratio
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("includeText", this.includeText);

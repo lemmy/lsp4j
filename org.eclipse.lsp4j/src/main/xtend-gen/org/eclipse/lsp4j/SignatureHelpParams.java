@@ -66,7 +66,6 @@ public class SignatureHelpParams extends TextDocumentPositionAndWorkDoneProgress
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("context", this.context);

@@ -71,7 +71,6 @@ public class ModulesResponse {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("modules", this.modules);

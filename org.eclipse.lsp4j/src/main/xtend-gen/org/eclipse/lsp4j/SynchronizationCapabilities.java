@@ -100,7 +100,6 @@ public class SynchronizationCapabilities extends DynamicRegistrationCapabilities
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("willSave", this.willSave);

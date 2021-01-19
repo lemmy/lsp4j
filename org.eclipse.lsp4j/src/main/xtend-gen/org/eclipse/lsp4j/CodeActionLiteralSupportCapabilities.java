@@ -48,7 +48,6 @@ public class CodeActionLiteralSupportCapabilities {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("codeActionKind", this.codeActionKind);

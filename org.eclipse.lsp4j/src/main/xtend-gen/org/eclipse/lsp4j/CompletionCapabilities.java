@@ -107,7 +107,6 @@ public class CompletionCapabilities extends DynamicRegistrationCapabilities {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("completionItem", this.completionItem);

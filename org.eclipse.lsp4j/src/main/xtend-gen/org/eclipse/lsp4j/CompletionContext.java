@@ -77,7 +77,6 @@ public class CompletionContext {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("triggerKind", this.triggerKind);

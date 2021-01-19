@@ -82,7 +82,6 @@ public class CallHierarchyIncomingCall {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("from", this.from);

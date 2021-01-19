@@ -104,7 +104,6 @@ public class ColorPresentationParams extends WorkDoneProgressAndPartialResultPar
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("textDocument", this.textDocument);

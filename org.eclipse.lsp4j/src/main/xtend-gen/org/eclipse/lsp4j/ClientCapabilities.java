@@ -159,7 +159,6 @@ public class ClientCapabilities {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("workspace", this.workspace);

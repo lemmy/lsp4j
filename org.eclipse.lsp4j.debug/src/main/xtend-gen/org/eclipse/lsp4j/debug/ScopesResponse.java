@@ -46,7 +46,6 @@ public class ScopesResponse {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("scopes", this.scopes);

@@ -85,7 +85,6 @@ public class DocumentOnTypeFormattingParams extends TextDocumentPositionParams {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("options", this.options);

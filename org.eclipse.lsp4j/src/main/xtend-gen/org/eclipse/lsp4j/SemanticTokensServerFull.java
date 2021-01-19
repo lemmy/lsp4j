@@ -49,7 +49,6 @@ public class SemanticTokensServerFull {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("delta", this.delta);

@@ -133,7 +133,6 @@ public class RenameCapabilities extends DynamicRegistrationCapabilities {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("prepareSupport", this.prepareSupport);

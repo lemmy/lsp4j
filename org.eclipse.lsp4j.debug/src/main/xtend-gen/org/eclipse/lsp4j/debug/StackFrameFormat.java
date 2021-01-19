@@ -203,7 +203,6 @@ public class StackFrameFormat extends ValueFormat {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("parameters", this.parameters);

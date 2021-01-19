@@ -77,7 +77,6 @@ public class DocumentOnTypeFormattingOptions {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("firstTriggerCharacter", this.firstTriggerCharacter);

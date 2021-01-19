@@ -206,7 +206,6 @@ public class PublishDiagnosticsCapabilities {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("relatedInformation", this.relatedInformation);

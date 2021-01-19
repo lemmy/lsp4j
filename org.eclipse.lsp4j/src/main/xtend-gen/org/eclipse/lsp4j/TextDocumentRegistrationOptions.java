@@ -53,7 +53,6 @@ public class TextDocumentRegistrationOptions {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("documentSelector", this.documentSelector);

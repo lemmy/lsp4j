@@ -54,7 +54,6 @@ public class DidChangeConfigurationParams {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("settings", this.settings);

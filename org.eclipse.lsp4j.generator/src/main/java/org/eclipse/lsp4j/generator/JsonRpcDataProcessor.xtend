@@ -148,7 +148,6 @@ class JsonRpcDataProcessor extends AbstractClassProcessor {
 		impl.addMethod("toString") [
 			returnType = string
 			addAnnotation(newAnnotationReference(Override))
-			addAnnotation(newAnnotationReference(Pure))
 			val accessorsUtil = new AccessorsProcessor.Util(context)
 			body = '''
 				«ToStringBuilder» b = new «ToStringBuilder»(this);

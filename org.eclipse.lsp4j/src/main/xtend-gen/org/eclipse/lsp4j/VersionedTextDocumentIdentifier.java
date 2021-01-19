@@ -70,7 +70,6 @@ public class VersionedTextDocumentIdentifier extends TextDocumentIdentifier {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("version", this.version);

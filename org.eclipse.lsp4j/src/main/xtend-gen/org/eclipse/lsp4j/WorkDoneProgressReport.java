@@ -131,7 +131,6 @@ public class WorkDoneProgressReport implements WorkDoneProgressNotification {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("cancellable", this.cancellable);

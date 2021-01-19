@@ -345,7 +345,6 @@ public class InitializeParams implements WorkDoneProgressParams {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("workDoneToken", this.workDoneToken);

@@ -140,7 +140,6 @@ public class FoldingRange {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("startLine", this.startLine);

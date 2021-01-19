@@ -77,7 +77,6 @@ public abstract class ResourceOperation {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("kind", this.kind);

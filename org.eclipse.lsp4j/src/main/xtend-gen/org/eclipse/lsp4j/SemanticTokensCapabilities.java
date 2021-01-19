@@ -190,7 +190,6 @@ public class SemanticTokensCapabilities extends DynamicRegistrationCapabilities 
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("requests", this.requests);

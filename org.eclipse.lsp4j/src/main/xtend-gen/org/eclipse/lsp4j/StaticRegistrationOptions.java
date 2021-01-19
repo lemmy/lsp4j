@@ -51,7 +51,6 @@ public class StaticRegistrationOptions extends TextDocumentRegistrationOptions {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("id", this.id);

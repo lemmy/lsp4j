@@ -141,7 +141,6 @@ public class LocationLink {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("originSelectionRange", this.originSelectionRange);

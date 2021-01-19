@@ -46,7 +46,6 @@ public class VariablesResponse {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("variables", this.variables);

@@ -120,7 +120,6 @@ public class ExceptionInfoResponse {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("exceptionId", this.exceptionId);

@@ -94,7 +94,6 @@ public class ExceptionBreakpointsFilter {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("filter", this.filter);

@@ -18,7 +18,6 @@ import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 @SuppressWarnings("all")
 public class DefinitionRegistrationOptions extends AbstractTextDocumentRegistrationAndWorkDoneProgressOptions {
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("workDoneProgress", getWorkDoneProgress());

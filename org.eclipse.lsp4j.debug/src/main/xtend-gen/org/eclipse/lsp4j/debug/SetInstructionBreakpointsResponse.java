@@ -46,7 +46,6 @@ public class SetInstructionBreakpointsResponse {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("breakpoints", this.breakpoints);

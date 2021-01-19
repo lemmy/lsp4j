@@ -47,7 +47,6 @@ import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ObjectExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
-import org.eclipse.xtext.xbase.lib.Pure;
 import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 
 @SuppressWarnings("all")
@@ -284,7 +283,6 @@ public class JsonRpcDataProcessor extends AbstractClassProcessor {
       final Procedure1<MutableMethodDeclaration> _function = (MutableMethodDeclaration it) -> {
         it.setReturnType(context.getString());
         it.addAnnotation(context.newAnnotationReference(Override.class));
-        it.addAnnotation(context.newAnnotationReference(Pure.class));
         final AccessorsProcessor.Util accessorsUtil = new AccessorsProcessor.Util(context);
         StringConcatenationClient _client = new StringConcatenationClient() {
           @Override

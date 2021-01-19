@@ -41,7 +41,6 @@ public class SemanticTokensDeltaPartialResult {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("edits", this.edits);

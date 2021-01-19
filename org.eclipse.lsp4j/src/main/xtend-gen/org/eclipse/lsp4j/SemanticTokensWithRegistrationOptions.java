@@ -184,7 +184,6 @@ public class SemanticTokensWithRegistrationOptions extends AbstractWorkDoneProgr
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("legend", this.legend);

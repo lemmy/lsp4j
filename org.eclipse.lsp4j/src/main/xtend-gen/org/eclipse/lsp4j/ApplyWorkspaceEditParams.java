@@ -83,7 +83,6 @@ public class ApplyWorkspaceEditParams {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("edit", this.edit);

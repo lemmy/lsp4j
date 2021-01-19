@@ -320,7 +320,6 @@ public class Scope {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("name", this.name);

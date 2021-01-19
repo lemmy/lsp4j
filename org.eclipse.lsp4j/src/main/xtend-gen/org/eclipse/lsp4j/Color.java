@@ -110,7 +110,6 @@ public class Color {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("red", this.red);

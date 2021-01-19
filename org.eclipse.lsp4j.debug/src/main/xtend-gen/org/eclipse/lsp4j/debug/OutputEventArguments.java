@@ -243,7 +243,6 @@ public class OutputEventArguments {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("category", this.category);

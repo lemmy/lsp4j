@@ -155,7 +155,6 @@ public class BreakpointLocationsArguments {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("source", this.source);

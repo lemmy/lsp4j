@@ -106,7 +106,6 @@ public class TextDocumentPositionParams {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("textDocument", this.textDocument);

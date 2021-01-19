@@ -104,7 +104,6 @@ public class RenameFile extends ResourceOperation {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("oldUri", this.oldUri);

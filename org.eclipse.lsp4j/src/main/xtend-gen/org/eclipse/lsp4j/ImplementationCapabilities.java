@@ -61,7 +61,6 @@ public class ImplementationCapabilities extends DynamicRegistrationCapabilities 
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("linkSupport", this.linkSupport);

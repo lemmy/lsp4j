@@ -80,7 +80,6 @@ public class SelectionRangeParams extends WorkDoneProgressAndPartialResultParams
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("textDocument", this.textDocument);

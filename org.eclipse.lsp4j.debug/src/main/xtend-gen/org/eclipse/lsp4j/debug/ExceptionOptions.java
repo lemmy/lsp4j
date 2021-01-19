@@ -82,7 +82,6 @@ public class ExceptionOptions {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("path", this.path);

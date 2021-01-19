@@ -283,7 +283,6 @@ public class CodeAction {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("title", this.title);

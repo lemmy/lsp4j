@@ -23,7 +23,6 @@ import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 @SuppressWarnings("all")
 public class CallHierarchyPrepareParams extends TextDocumentPositionAndWorkDoneProgressParams {
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("workDoneToken", getWorkDoneToken());

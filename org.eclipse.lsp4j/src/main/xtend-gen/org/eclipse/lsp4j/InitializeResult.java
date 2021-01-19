@@ -81,7 +81,6 @@ public class InitializeResult {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("capabilities", this.capabilities);

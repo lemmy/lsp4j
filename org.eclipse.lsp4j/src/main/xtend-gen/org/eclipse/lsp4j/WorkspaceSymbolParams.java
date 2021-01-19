@@ -55,7 +55,6 @@ public class WorkspaceSymbolParams extends WorkDoneProgressAndPartialResultParam
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("query", this.query);

@@ -213,7 +213,6 @@ public class ProgressStartEventArguments {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("progressId", this.progressId);

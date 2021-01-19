@@ -32,7 +32,6 @@ public class DefinitionParams extends TextDocumentPositionAndWorkDoneProgressAnd
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("partialResultToken", getPartialResultToken());

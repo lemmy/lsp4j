@@ -47,7 +47,6 @@ public class TerminateThreadsArguments {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("threadIds", this.threadIds);

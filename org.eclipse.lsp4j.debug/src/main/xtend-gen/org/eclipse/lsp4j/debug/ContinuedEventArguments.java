@@ -71,7 +71,6 @@ public class ContinuedEventArguments {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("threadId", this.threadId);

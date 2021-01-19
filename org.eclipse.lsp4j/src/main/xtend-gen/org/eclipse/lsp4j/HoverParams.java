@@ -32,7 +32,6 @@ public class HoverParams extends TextDocumentPositionAndWorkDoneProgressParams {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("workDoneToken", getWorkDoneToken());

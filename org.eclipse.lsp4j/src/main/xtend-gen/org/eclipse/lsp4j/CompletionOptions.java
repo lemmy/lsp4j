@@ -70,7 +70,6 @@ public class CompletionOptions extends AbstractWorkDoneProgressOptions {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("resolveProvider", this.resolveProvider);

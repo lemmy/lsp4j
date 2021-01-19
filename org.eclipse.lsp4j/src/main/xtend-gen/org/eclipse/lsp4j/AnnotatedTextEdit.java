@@ -56,7 +56,6 @@ public class AnnotatedTextEdit extends TextEdit {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("annotationId", this.annotationId);

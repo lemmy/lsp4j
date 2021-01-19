@@ -154,7 +154,6 @@ public class DisassembleArguments {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("memoryReference", this.memoryReference);

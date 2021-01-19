@@ -267,7 +267,6 @@ public class TypeHierarchyItem {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("name", this.name);

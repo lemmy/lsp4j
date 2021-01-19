@@ -649,7 +649,6 @@ public class TextDocumentClientCapabilities {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("synchronization", this.synchronization);

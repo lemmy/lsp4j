@@ -57,7 +57,6 @@ public class CreateFilesParams {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("files", this.files);

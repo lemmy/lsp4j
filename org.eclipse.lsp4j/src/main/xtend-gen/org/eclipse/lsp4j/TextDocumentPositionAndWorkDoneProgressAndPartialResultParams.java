@@ -75,7 +75,6 @@ public abstract class TextDocumentPositionAndWorkDoneProgressAndPartialResultPar
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("partialResultToken", this.partialResultToken);

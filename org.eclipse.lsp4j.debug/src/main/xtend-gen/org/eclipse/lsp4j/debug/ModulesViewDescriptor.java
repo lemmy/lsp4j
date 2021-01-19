@@ -39,7 +39,6 @@ public class ModulesViewDescriptor {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("columns", this.columns);

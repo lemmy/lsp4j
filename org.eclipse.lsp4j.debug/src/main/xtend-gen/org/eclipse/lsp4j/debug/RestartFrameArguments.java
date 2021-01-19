@@ -40,7 +40,6 @@ public class RestartFrameArguments {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("frameId", this.frameId);

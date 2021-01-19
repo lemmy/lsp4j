@@ -93,7 +93,6 @@ public class CodeActionContext {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("diagnostics", this.diagnostics);

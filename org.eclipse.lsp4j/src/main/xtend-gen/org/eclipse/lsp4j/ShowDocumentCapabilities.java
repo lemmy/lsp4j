@@ -52,7 +52,6 @@ public class ShowDocumentCapabilities {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("support", this.support);

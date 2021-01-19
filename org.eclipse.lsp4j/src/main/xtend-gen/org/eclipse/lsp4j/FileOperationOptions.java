@@ -56,7 +56,6 @@ public class FileOperationOptions {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("filters", this.filters);

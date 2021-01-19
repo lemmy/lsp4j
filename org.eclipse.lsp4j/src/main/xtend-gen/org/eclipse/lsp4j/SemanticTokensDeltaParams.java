@@ -78,7 +78,6 @@ public class SemanticTokensDeltaParams extends WorkDoneProgressAndPartialResultP
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("textDocument", this.textDocument);

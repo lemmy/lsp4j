@@ -23,7 +23,6 @@ import org.eclipse.xtext.xbase.lib.util.ToStringBuilder;
 @SuppressWarnings("all")
 public class MonikerCapabilities extends DynamicRegistrationCapabilities {
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("dynamicRegistration", getDynamicRegistration());

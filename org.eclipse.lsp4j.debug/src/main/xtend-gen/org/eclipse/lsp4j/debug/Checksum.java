@@ -67,7 +67,6 @@ public class Checksum {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("algorithm", this.algorithm);

@@ -46,7 +46,6 @@ public class DisassembleResponse {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("instructions", this.instructions);

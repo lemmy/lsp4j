@@ -252,7 +252,6 @@ public class EvaluateResponse {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("result", this.result);

@@ -102,7 +102,6 @@ public class CodeActionParams extends WorkDoneProgressAndPartialResultParams {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("textDocument", this.textDocument);

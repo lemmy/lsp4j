@@ -40,7 +40,6 @@ public class SemanticTokensPartialResult {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("data", this.data);

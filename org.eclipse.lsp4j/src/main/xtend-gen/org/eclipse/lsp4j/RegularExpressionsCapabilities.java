@@ -78,7 +78,6 @@ public class RegularExpressionsCapabilities {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("engine", this.engine);

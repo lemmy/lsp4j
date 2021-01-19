@@ -71,7 +71,6 @@ public class CompletionItemKindCapabilities {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("valueSet", this.valueSet);

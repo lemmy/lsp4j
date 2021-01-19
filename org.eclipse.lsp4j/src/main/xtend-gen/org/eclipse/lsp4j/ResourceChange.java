@@ -84,7 +84,6 @@ public class ResourceChange {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("current", this.current);

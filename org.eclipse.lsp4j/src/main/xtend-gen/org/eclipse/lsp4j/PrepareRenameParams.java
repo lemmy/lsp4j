@@ -32,7 +32,6 @@ public class PrepareRenameParams extends TextDocumentPositionParams {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("textDocument", getTextDocument());

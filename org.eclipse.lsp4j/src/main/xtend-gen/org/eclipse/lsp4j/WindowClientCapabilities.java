@@ -103,7 +103,6 @@ public class WindowClientCapabilities {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("workDoneProgress", this.workDoneProgress);

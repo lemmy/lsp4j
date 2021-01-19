@@ -76,7 +76,6 @@ public class FileRename {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("oldUri", this.oldUri);

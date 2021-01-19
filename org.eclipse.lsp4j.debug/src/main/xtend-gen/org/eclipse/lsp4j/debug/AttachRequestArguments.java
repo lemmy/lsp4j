@@ -58,7 +58,6 @@ public class AttachRequestArguments {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("__restart", this.__restart);

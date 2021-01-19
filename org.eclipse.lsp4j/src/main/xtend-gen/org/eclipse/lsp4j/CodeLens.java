@@ -106,7 +106,6 @@ public class CodeLens {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("range", this.range);

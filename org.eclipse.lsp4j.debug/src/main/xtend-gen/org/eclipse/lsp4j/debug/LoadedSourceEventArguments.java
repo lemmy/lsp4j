@@ -68,7 +68,6 @@ public class LoadedSourceEventArguments {
   }
   
   @Override
-  @Pure
   public String toString() {
     ToStringBuilder b = new ToStringBuilder(this);
     b.add("reason", this.reason);
