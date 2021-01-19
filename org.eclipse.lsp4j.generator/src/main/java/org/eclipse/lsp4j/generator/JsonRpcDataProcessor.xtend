@@ -41,6 +41,18 @@ class JsonRpcDataProcessor extends AbstractClassProcessor {
 		equalsHashCodeUtil.addEquals(impl, fields, shouldIncludeSuper)
 		equalsHashCodeUtil.addHashCode(impl, fields, shouldIncludeSuper)
 
+		// Remove all @Pure annotations that are hard-wired by equalsHashCodeUtil and AccessorUtil above.
+		// This creates an undesired dependency towards xtend that adds no functionality.
+		impl.getDeclaredMethods.forEach [ method | 
+			val purified = method.findAnnotation(Pure.findTypeGlobally)
+			if (purified !== null) {
+				//TODO:
+				// method.removeAnnotation appears to be a no-op and has to be replaced
+				// with the proper way of removing annotation from a method.
+				method.removeAnnotation(newAnnotationReference(Pure))
+			}
+		]
+
 		return impl
 	}
 

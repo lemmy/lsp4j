@@ -41,6 +41,7 @@ import org.eclipse.xtext.xbase.lib.Functions.Function1;
 import org.eclipse.xtext.xbase.lib.IterableExtensions;
 import org.eclipse.xtext.xbase.lib.ObjectExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
+import org.eclipse.xtext.xbase.lib.Pure;
 
 @SuppressWarnings("all")
 public class JsonRpcDataProcessor extends AbstractClassProcessor {
@@ -69,6 +70,13 @@ public class JsonRpcDataProcessor extends AbstractClassProcessor {
     final Iterable<? extends MutableFieldDeclaration> fields = IterableExtensions.filter(impl.getDeclaredFields(), _function_1);
     equalsHashCodeUtil.addEquals(impl, fields, shouldIncludeSuper);
     equalsHashCodeUtil.addHashCode(impl, fields, shouldIncludeSuper);
+    final Consumer<MutableMethodDeclaration> _function_2 = (MutableMethodDeclaration method) -> {
+      final AnnotationReference purified = method.findAnnotation(context.findTypeGlobally(Pure.class));
+      if ((purified != null)) {
+        method.removeAnnotation(context.newAnnotationReference(Pure.class));
+      }
+    };
+    impl.getDeclaredMethods().forEach(_function_2);
     return impl;
   }
   
